@@ -4,11 +4,9 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="oslo.config-1.4.0" />
     <orderEntry type="module" module-name="oslo.db-1.0.2" />
     <orderEntry type="module" module-name="oslo.messaging-1.4.1" />
     <orderEntry type="module" module-name="pythonsqldb" />
     <orderEntry type="module" module-name="python-neutronclient-2.3.9" />
   </component>
 </module>
-
