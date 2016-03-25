@@ -1,0 +1,2 @@
+cp volumes.patch /usr/lib/python2.7/site-packages/cinderclient/v2;cd /usr/lib/python2.7/site-packages/cinderclient/v2;patch -p0 <volumes.patch
+cp base.patch /usr/lib/python2.7/site-packages/cinderclient; cd /usr/lib/python2.7/site-packages/cinderclient;patch -p0 <base.patch 

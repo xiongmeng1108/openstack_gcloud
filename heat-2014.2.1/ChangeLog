@@ -1,0 +1,4005 @@
+CHANGES
+=======
+
+2014.2.1
+--------
+
+* Updated from global requirements
+* Remove check_uptodate.sh check from tox.ini
+* Updated from global requirements
+* Make ResourceGroup updates update nested stacks
+* ResourceGroup don't special-case zero count
+* SoftwareDeployments make servers property updateable
+* Use environment file in template-validate
+* StackResource consider files in implementation_signature
+* Move implementation_signature to StackResource
+* Correctly set CombinationAlarm repeat_actions
+* Use properties in ceilometer alarm not parsed_template('Properties')
+* Make sure that property defaults are converted correctly
+* RandomString don't skip superclass validation
+* unconfigured clients look in the [clients] section for defaults
+* Update sample conf for new oslo.db release
+* Mark stack_domain_admin_password as a secret option
+* Inherit roles for create_trust_context()
+* Always using domain id to create domain project or user
+* Add CERT file support in heat-keystone-setup-domain
+* Fix add_dependencies for floating_ip resource
+* Correct CA cert argument for glanceclient
+* Tolerate null on Json db load
+* Don't stop update immediately on error
+* Opening stable/juno
+
+2014.2
+------
+
+* Don't update a LoadBalancer under autoscaling control
+* Make sure that the properties are stored on updates
+* Do not attempt a stack update when it is deleting
+* Update references to auth_token middleware
+* Add missing extra "greenthread" arg to remove_event()
+
+2014.2.rc2
+----------
+
+* Update translations for Juno
+* Don't send multiple update-cancel messages to an event
+* Clean up signalling events after stack updates
+* Template not required on stack-adopt
+* Updated from global requirements
+
+2014.2.rc1
+----------
+
+* Fix some sphinx warnings/errors
+* Disable Abandon & Adopt features by default
+* Include parameters info in stack-abandon data
+* Update usage of Barbican library
+* Switch to oslo.utils
+* Remove unused network_utils
+* Don't use DB column names for sort keys
+* Skip validation if depends on not created resource
+* Fix subnet residue when resource deletion
+* Handle clients that don't accept auth_url=None
+* Fix usage of client in Barbican resources
+* Fix barbican plugin registration
+* Fix heat.engine.clients.has_client
+* Include credentials for heat calling self
+* Add keystone v2 keypair methods
+* FloatingIP updateable port_id, fixed_ip_address
+* Do template validation during creation
+* Fix couple tests in test_engine_service.py
+* Improve error handling in api files
+* Add an option to disable cloud watch lite
+* Pass the correct matching_metadata to Ceilometer
+* Don't pass empty action strings to ceilometer
+* Make sure that AutoScaling group has it's tag set correctly
+* Imported Translations from Transifex
+* Default port policy to force replacement
+* Convert parse error to text type
+* Add test to serialize and deserialize exceptions
+* Use six to translate exception message in tests
+* Commit transaction on object delete
+* Associate floating IP with router interface
+* Updated from global requirements
+* Updated from global requirements
+* Fixed adopt failure for stack with resource group
+* Resolve AWS::EC2::Instance AZ output to a value if not specified
+* Implement CFN CancelUpdateStack action
+* Switch heat resources & db & tests to oslo.i18n
+* Switch heat engine to oslo.i18n
+* Pass list of parameters to engine service to reset
+* Pass flag to engine service to patch parameters
+* Updated from global requirements
+* Fix outdated comment in KeystoneClientV3
+* Correct KEY/VALUE names for NOVA_SCHEDULER_HINTS
+* Add Heat REST API action for cancel update stack
+* Add RPC API for cancel update stack
+* Enhance SoftwareComponent property validation
+* Enable SoftwareDeployment for SoftwareComponent
+* Add OS::Heat::SoftwareComponent resource
+* Manually update requirements to oslo.messaging
+* Set the default state of a stack to CREATE_IN_PROGRESS
+* Add heat-keystone-setup-domain to sphinx conf.py
+* Make str(json_param) return string vs python
+* Convert functions into a fixed part of the template
+* Allow filtering of stacks by username, tenant and owner_id
+* Don't delete stack domain project on stack-abandon
+* Fix AWS::EC2::VPC resource delete failure
+* Fix file mode, remove executable bit
+* Log translation hint for Heat.api
+* Fix so that CSV as str return value
+* Cleanup trust on delete with stored context if needed
+* Tests update FakeKeystoneClient to align user_id and trustor
+* Implement AWS::EC2::EIPAssociation updatable
+* Add user data and config drive properties
+* Imported Translations from Transifex
+* Use action_handler_task for delete_snapshot
+* Clarify NotFound error when creating trust
+* Only delete stack user project from correct domain
+* Reuse disable_rollback on stack update
+
+2014.2.b3
+---------
+
+* Log translation hint for Heat.common
+* warn against sorting requirements
+* Refactor nested stack create/update/preview
+* Log translation hint for Heat.tests
+* Save files while updating a template
+* Fix a wrong argument name at Heat keystoneclient plugin
+* Implement BlockDeviceMappings for LaunchConfiguration
+* Refactor functions in eip.py
+* Fix delete failed because association creation failed
+* Modify the way to get 'network_id' of the port
+* Add validate function for AWS::EC2::EIPAssociation
+* Implement OS::Sahara::Cluster resource
+* Replace marconi by zaqar in heat plugins
+* Implement AWS::EC2::EIP updatable
+* Switch heat api to oslo i18n
+* Import oslo.i18n and port heat bins to use oslo.i18n
+* correctly implement volumes_from property
+* Added PublicDnsName verification in unit tests
+* Add length constraint to Nova Keypair's name property
+* Implement OS::Sahara::ClusterTemplate resource
+* Implement OS::Sahara::NodeGroupTemplate resource
+* Implement OS::Heat::StructuredDeployments
+* Implement OS::Heat::SoftwareDeployments
+* Provide access to outputs from OS::Heat::ResourceGroup
+* ResourceGroup make do_prop_replace class method
+* ResourceGroup build from list of resource names
+* Implements stack lifecycle plugpoints
+* Fix port residue when instance deletion
+* Implement GroupSet updatable for AWS::EC2::NetworkInterface
+* Match tenant_id when name ambiguity in get_secgroup_uuids()
+* Get rid of old-style classes
+* Fix marconi plugin registration
+* Allow JSON parameters in environment files
+* Improve docker resource deletion
+* Reimplement Volume snapshot with backup
+* Doc: don't generate empty properties fields
+* Rename docker directory to heat_docker
+* Detect neutron endpoint on-the-fly
+* Allow resource groups of 0 resources
+* Error class can accept message with format characters
+* Add missing "." to help strings
+* ResourceGroup subclass build resource definition
+* Common stack_user_project_id across nested stacks
+* Don't import Properties class directly
+* Add test for ResourceDefinition equality
+* Don't stop creates/updates immediately on error
+* Allow concurrent tasks to complete after error
+* Scheduler: Allow a grace period when cancelling tasks
+* Allow an update after a failure
+* Use ResourceDefinition as 'before' in resource updates
+* Add a method to freeze a ResourceDefinition
+* Always replace a failed resource on rollback
+* Pass properties to Resource._needs_update()
+* Refactor Resource's decision whether to update
+* Store properties data in database
+* Add subnets attribute to OS::Neutron::Port resource
+* Add networks property to OS::Trove::Instance
+* AWS SecurityGroup use is_using_neutron()
+* Allow to decide between Nova-network and Neutron
+* Deny updates to AWS::EC2::VolumeAttachment
+* Unittests: Refactor Volume resources tests
+* Check for error messages in volume tests
+* Improve errors in Volume tasks
+* Add more info to ResourceUnknownStatus
+* Split scaling policy into separate files
+* Cut down on warning logs
+* Fix failed to delete the EIP resource
+* boolean parameter type is not recognized in the API
+* Allow for setting ViP ID
+* Additional exception type check for ceilo-client
+* Mark metadata_update RPC call deprecated
+* Fix typo
+* Return full error message for HTTP errors
+* Move name resolving before get server
+* Gate-supporting files for functional tests
+* Edits on template_guide/functions.rst
+* Add language attribute to code samples
+* Change type validate method of template resource
+* Push metadata changes to the TempURL
+* Add Server software_config_transport POLL_TEMP_URL
+* Allow method verb override in get_temp_url
+* Include project ID in stack abandon data
+* Fix usage of environment section constants
+* Implement sahara client plugin
+* Add "parent" key to list stacks output
+* Add show_nested parameter to GET v1/stacks API
+* Add show_nested to count_stacks RPC interface
+* db API add show_nested to stack_count_all
+* Add show_nested to list_stacks RPC interface
+* Update stack.load_all adding show_nested
+* db API add show_nested to stack_get_all
+* SoftwareDeployments move signal reason into resource plugin
+* Convert CFN waitcondition API to resource_signal
+* Fix downgrades in migration scripts 016 and 035
+* Fix wrong log level
+* Providing reference on resource during preview
+* Moving network_id_from_subnet_id to neutron client
+* Using neutron utils function from neutron plugin
+* Move neutron_utils functions to neutron client
+* Use the template module to access the Template class
+* Avoid name clash between local variable and a module
+* Use auth_token from keystonemiddleware
+* Use empty list in list_join for validation
+* Use oslo.config>=1.4.0.0a3
+* Imported Translations from Transifex
+* Remove the unused doc path heat/doc
+* handle_signal to handle translated error msgs
+* Implement snapshot listing
+* Provide access to outputs from OS::Heat::AutoScalingGroup
+* Remove resource_id_set(None) calls
+* Resolved server and instance status redundancy
+* Run migration tests on PostgreSQL and MySQL
+* Add some stubs speeding up test suite
+* Add OS::Swift::Signal resource
+* Add owner_id to new _create_stack RPC interface
+* rpc client test remove rpcapi logic
+* engine service add owner_id to create_stack
+* Add utility functions for Swift TempURLs
+* Fix client exception handling in VolumeExtendTask
+* Silence urllib3 redundant logging
+* Make Fn::Join give a better error message
+* Privilege checking for heat-keystone-setup-domain
+* Convert AWS Route Table and association to use clients
+* Implement snapshots for servers and volumes
+* Enable lazy translation on heat
+* Return metadata from resource_signal RPC interface
+* WaitConditionHandle resources, create events with reason data
+* Native WaitConditionHandle move to common curl_cli
+* Add "backup" column to stack table
+* Move VolumeAttachment updates to Cinder resource
+* Using default FnGetRefId behavior for LaunchConfig
+* Adding validation algorithm for get attr functions
+* Move CooldownMixin into separate file
+* Implement barbican client plugin
+* Move nova_utils functions to nova client plugin
+* Implement marconi client plugin
+* Port rackspace clients to client plugins
+* Use setuptools to install contrib plugins
+* Cinder, trove, ceilo use ignore_not_found etc
+* Use Constraint stubs in common.py
+* Add constraints to check whether image/keypair exists
+* Remove function get_software_config
+* Fix typos in comments and help strings
+* Man page for heat-keystone-setup-domain
+* test_parser.py remove some spurious Replay/Verify calls
+* Use new template for resource update reparse
+* Allow listing of resources from deleted stacks
+* Refactor calling handle_* into a separate task
+* Display stack owner when formatting stacks
+* Implement check for Instance resource
+* Add stack-check action to the API
+* Check resources are in expected states
+* Template get_version breaks with Template object
+* Add backward compatibility for notification_driver
+* Glance, swift use ClientPlugin.ignore_not_found
+* Neutron use ClientPlugin.ignore_not_found etc
+* Nova use ClientPlugin.ignore_not_found
+* Don't validate parameters when loading a stack
+* Fix dict format in wait_condition.py docstrings
+* Fix DBError output in test logs
+* Newline cleanups in db API
+* Add APIs to create and manipulate snapshots
+* Fix for minor typos in stack.py
+* Appropriate exception for signal handling failure
+* Implement BlockDeviceMappings for AWS::EC2::Instance
+* Allow ResourceGroup to select an attribute path
+* Deny updates to AWS::EC2::Volume resource
+* Amend docs with `immutable` property attribute
+* Check for property immutability in rsrc update
+* Add `immutable` property attribute
+* Add config file for performance gate job
+* Fix monkey-patching occurence in a test
+* Improve mocking in HeatTestCase
+* Implement custom constraints for subnet/port/router
+* Always convert string type params to string
+* Fix dead link in cfn template doc
+* Show correct error messages
+* LaunchConfiguration replace on changed Metadata
+* replace dict.iteritems() with six.iteritems(dict)
+* Add controller and action debug message in wsgi.py
+* Move size update to Cinder volume
+* Add log output about HTTP calls in cinderclient
+* Restore resource_id from backup_stack
+* Refactor UpdateReplace exception
+* Fix signal handling for WSGI servers
+* Fix rollback failure when updating stack
+* Client plugin exception handling methods
+* Correct example syntax and whitespace
+* Add RPC method to snapshot stacks
+* Prevent excessive validation for maxPersonality limit
+* Fixed wait skipped after 1st step of task
+* Retry resource create until success
+* Exceptions ResourceInError, ResourceUnknownStatus
+* Allow Resources to select paths from attributes
+* Use standard FnGetAtt method for Swift container
+* Add "index_var" property to the resource group resource
+* Parse RST in plug-in class docs
+* Stop software_deployments from passing empty keys
+* Fixed resource errors logged at default log level
+* Replace str() with six.text_type() where exception is used
+* Reusing PARAMETER_CONSTRAINTS value
+* Set python hash seed to 0 in tox.ini
+* Remove rst2script.sed and integration.sh
+* Allow plugins to specify signal event reason
+* Update test_signal to use stub_keystoneclient
+* Add native WaitConditionHandle resource
+* Remove deprecated tools/README instructions
+* timeutils function retry_backoff_delay
+* Add template version for the provider template
+* Move the Stack class into stack.py
+* Refactor handling of exceptions in Resource actions
+* Remove duplicate opt import in sqlalchemy/api.py
+
+2014.2.b2
+---------
+
+* test_heatclient fix mocking with latest keystone
+* Add resource properties to stack-preview
+* Pass user_creds_id into nested stacks
+* Add query param to allow nested resource list
+* Fix serialization of InvalidSchemaError
+* Refactor AWS::EC2::Instance delete handling
+* Refactor OS::Nova::Server delete handling
+* Account for status when deleting servers
+* Don't resolve attributes before create
+* Move glance_utils functions to glance client plugin
+* Move network constraint to neutron plugin
+* Use config region_name_for_services for rackspace clients
+* Store clients in context
+* stack user add _user_token
+* clients make heat_url public
+* Use six.add_metaclass instead of __metaclass__
+* Revert "Store clients in context"
+* Remove tools/glance-jeos-add-from-github.sh
+* Remove deprecated nova_create_flavors.sh script
+* Store clients in context
+* Fix updating from an empty stack
+* Fix updating for OS::Neutron::Port resource
+* Fix schema-to-template for empty schema
+* Stop coercing provider res. attributes to strings
+* Allow user to view outputs of failed stacks
+* Expose recent docker features in the resource
+* Implement keystone client plugin
+* Implement heat client plugin
+* Implement ceilometer client plugin
+* Implement trove client plugin
+* heat_keystoneclient add get_user_token
+* Remove unused functions from policy enforcer
+* Policy Enforcer, pass entire context dict
+* Pass user_creds_id when creating backup stack
+* Refactor service readiness notification
+* Convert AWS::EC2::Subnet to use attributes Schema
+* Refactor selecting values from an attribute
+* Refactor ResourceGroup's FnGetAtt()
+* Create a new revision of HOT for Juno
+* Remove redundant method handle_get_attributes
+* Add missing DeprecationWarning category to warning
+* Implement events pagination, sorting and filtering
+* Migrate to oslo.db
+* Add an OS::Heat::WaitCondition resource
+* Refactor waitcondition resources to allow easier subclassing
+* Convert WaitConditionHandle to use handle_signal
+* Make sure we can create an empty template
+* Fix early resource property value validation
+* Fixing a typo
+* Removed redundant code in stack preview, create
+* Fix H201 violations and re-enable gating
+* Allow listing of resources and nested resources
+* Fix OS::Trove::Instance restore_point property
+* Don't overwrite deployments metadata in Server resource
+* Fix several misspells
+* Remove unused 'VERSIONS' definition
+* Fix error count for stack-list while show deleted
+* Change help text for StructuredConfig.CONFIG property
+* Implement cinder client plugin
+* Implement neutron client plugin
+* Fix typo in HOT template guide
+* Implement glance client plugin
+* Implement swift client plugin
+* Unit tests: Check for lost resource after failed rollback
+* remove bogus comments re stack_delete_after in tests
+* Fix test for stack delete on same active engine
+* Adding own child_template for AutoScalingGroup
+* Remove unused parameter name in validate_value
+* Change Volume metadata attribute to raw dict
+* Implement nova client plugin
+* Use stevedore to load client plugins
+* Revert "Convert WaitConditionHandle to use handle_signal"
+* Revert "Update waitcondition API to use signal RPC interface"
+* Revert "Refactor waitcondition resources to allow easier subclassing"
+* Add datastore properties to OS::Trove::Instance
+* Improve OS::Trove::Instance resource
+* Imported Translations from Transifex
+* HOT intrinisic function list_join like Fn::Join
+* Order intrinsic function docs alphabetically
+* Base class for client plugins
+* Refactor waitcondition resources to allow easier subclassing
+* Update waitcondition API to use signal RPC interface
+* Convert WaitConditionHandle to use handle_signal
+* Updated from global requirements
+* Move calculating new capacity to a function
+* Support using domain_name instead of domain_id
+* Makefile option to build xml docs
+* UnitTests: fix mock assertions usage
+* Don't expose password in heat-keystone-setup-domain logs
+* Use None instead of mutables in method params defaults
+* Implement Flavor Extra-specs Key/Value Pairs
+* Avoid truncating API Response
+* Sleep before stopping threads for delete
+* Catch NotFound for every stack delete db operation
+* use register_cli_opts instead of register_opts
+* Fix pass incorrect volume_size while building bdm
+* Change template loading to use stevedore extensions
+* Support loading constraints as stevedore extensions
+* Make heat.engine.clients a package
+* Deprecate direct access to clients methods
+* Use auth_token_info to initialize heat_keystoneclient sessions
+* Only do property validation in validate()
+* Fix pagination of stack-list
+* Pass the context when updating raw_templates
+* Guaranteed password complexity using OS::Heat::RandomString
+* Patch 044 migration to work w/ MySQL 5.6
+* Document get_file get_param incompatibility
+* Add a OS::Nova::ServerGroup resource
+* Re-organise top-level template guide structure
+* Port to oslo.messaging
+* Make some properties updatable for Volume resource
+* Don't rely on setdefault returning a value
+* Prevent "No handlers could be found..." logging
+* Sync oslo incubator
+* Remove unused generate_request_id
+* Fixed the reference to 'Creating Unit Tests' in HACKING.rst
+* Fix the section name in CONTRIBUTING.rst
+* Added links to missing integration information
+* Fix race condition deleting in-progress stack
+* Account for differences in Rackspace Cloud Glance
+* Update to latest version of pyrax and add Swift support
+* Hide deprecate warnings for metadata tests
+* Revert "Load resources using Resource.load_all_from_stack()"
+* Remove heat_keystoneclient roles filtering workaround
+* Don't set context auth_token in heat_keystoneclient
+* engine.clients always use keystoneclient auth_token
+* tests add stub_keystoneclient to base test class
+* test_autoscaling refactor suspend/resume stubbing
+* Remove test_autoscaling _stub_validate
+* Convert service.py to use_stored_context
+* parser.Stack add use_stored_context option
+* Hide warning for old style attribute schema test
+* Add log output of x-openstack-request-id from nova
+* Use a dict for clients memoization
+* Stop overriding CONF.default_log_levels per binary
+* Support x-openstack-request-id for Heat
+* Sync oslo-incubator.middleware module
+* Sync with oslo incubator
+* Remove usages of threads in DummyThreadGroup
+* Update: persist current template on change
+* Update template incrementally as resources change
+* Allow raw templates to be updated in the DB
+* Update: Keep a copy of the old template for rollback
+* Load resources using Resource.load_all_from_stack()
+* Refactor resource initialisation from DB
+* List stacks using Stack.load_all()
+* Implement Stack loading from DB as a separate function
+* Update: Make addition/removal of resources more explicit
+* RPC API: Really don't include metadata in resource list
+* Get resource description from ResourceDefinition
+* Get metadata from ResourceDefinition
+* Get the resource type from ResourceDefinition
+* Get deletion policy from ResourceDefinition
+* Use ResourceDefinition to generate UpdatePolicy
+* Unit tests: use ResourceDefinition to test facades
+* Use ResourceDefinition to generate Properties
+* Unit tests: Name resources the same as in template
+* Unit tests: always use ResourceDefinition for handle_update()
+* Unit tests: Always use ResourceDefinition for updates
+* Add name attribute to Nova server
+* Fix String Parameter Receive a unicode
+* Assume compute service_type for nova client
+* Allow passing an existing user_creds_id to parser.Stack
+* Instructions on image creation for SoftwareConfig
+* Restore resource metadata attribute
+* parser.Stack add stored_context
+* Implement NovaFloatingIpAssociation res updatable
+* Add parameter type validation before stack-create
+* Revert "Use auth_token_info to initialize heat_keystoneclient sessions"
+* Handle missing user_creds in stack.delete
+
+2014.2.b1
+---------
+
+* Use ResourceDefinition when updating Load Balancer
+* Add AllowedValues constraint to Rackspace::Cloud::LoadBalancer
+* Respect schema data type in constraint validation
+* Deprecate old schema definition in dbinstance
+* Use auth_token_info to initialize heat_keystoneclient sessions
+* Fix property-parameter mapping for boolean property
+* Add OS::Glance::Image resource
+* Patch 033 migration to work w/ MySQL 5.6
+* Ensure routing key is specified in the address for a direct producer
+* ec2token tolerate fully-qualified ec2authtoken auth_uri
+* Fix physical_resource_name for Nova server
+* Add auth_token_info to request context
+* Added reference to the Nova Flavor documentation
+* Add boolean type parameter process for template resource
+* Implement resize of Cinder volumes
+* Removed 'message' keyword when raising Error
+* Use add_resource() to build autoscaling templates
+* Allow a resource to be added to a template
+* Support passing a Template object to StackResource
+* Handle HOT when converting Outputs to Attributes
+* Use ResourceDefinition in autoscaling
+* Unit tests: Create resources with ResourceDefinition
+* Avoid double-initialisation of Resources
+* Don't log entire template
+* Fix spelling in a doc string
+* Heat and Openstack incomplete documentation
+* Added field parameter identifying the custom validation
+* Adding error message for output description
+* Fix default template for AWS::CloudWatch::Alarm with Ceilometer
+* Include parameter name in error message
+* Support of regional endpoinds using Keystone v2
+* Fix requirements_style_check on BSD platforms
+* Set rollback status early in update if triggered
+* Remove translation from loguserdata
+* Move Engine initialization into service start()
+* Get the dependency graph directly from functions
+* Use ResourceDefinition for creating Resources
+* Add a ResourceDefinition class
+* Fix exceptions in update_stack
+* Use entry points for config generation
+* Define options for glance client
+* Add OS:Barbican:Order resource
+* Add OS:Barbican:Secret resource
+* Implement caching of resource attributes
+* Remove optional imports from clients.py
+* Remove support for nova volumes
+* Use stack lock context manager in abandon & delete
+* Implement context manager for stack lock
+* Check that personality is provided before iterating
+* all non debug log messages should be translated
+* doc: generate a valid xml tree
+* Pass the parent's registry into child stacks
+* Add Boolean parameter type
+* Use Emacs-friendly file variable to set file encoding
+* Remove unnecessary coding line
+* remove default=None for config options
+* Deprecating the old style attribute Schema
+* Implement handle_update for FloatingIPAssociation resource
+* Allow functions to calculate dependencies
+* Unit tests: remove resolve_runtime_data() call
+* Sync version of sphinx from requirements
+* Replacing variable logger on LOG
+* test_engine_service remove redundant DummyThreadGroups
+* Use str_to_num for Number parameter
+* Re-enable lazy translation
+* Migrate to glanceclient to get image id
+* All resources to use Schema update_allowed
+* Remove mention of update_allowed_keys
+* removed deprecated tools
+* Fixes personality support in Rackspace ASG resource
+* Only raise UpdateReplace when properties change
+* Add missing VerifyAll calls to test_validate
+* Remove all mostly untranslated PO files
+* Fix docker volumes binds issue
+* Order imports in alphabetical order (9/9)
+* Sync oslo incubator
+* Restore resource_id from backup_stack when delete
+* Do no re-validate parameters for existing stacks
+* Use oslo.config for heat-keystone-setup-domain
+* Revert "Default engine workers to the number of CPUs"
+* Refactor neutron resources lookup
+* Add range constraint to AWS volume size
+* Do not validate constraints in schema constructor
+* Move API parameter parsing from OpenStack API to engine
+* Fix broken link to API reference
+* Using correct attribute of exception
+* Handle NotFoundException when deleting alarm
+* Only push metadata when required
+* Remove update_allowed_keys definition and usage
+* Default engine workers to the number of CPUs
+* Allow setting the number of heat engine workers
+* debug level logs should not be translated
+* Make attributes definition similar on properties
+* Fix failed to delete the NovaFloatingIPAssociation resource
+* Fix stack_resource's handle_adopt
+* Using new attribute schema for all resources
+* Removing default version for templates
+* Provides ability to reference existing neutron resources
+* Add a test equivalent to default_log_levels
+* TestRandomString was calling the wrong setUp
+* Make Server metadata a passive store again
+* Updated from global requirements
+* Make a top level contrib doc header
+* Add glanceclient to heat
+* Give resource fakes a string ID
+* Eager-load Stack.raw_template for Stack.load
+* Fetch RawTemplate from Stack, not a query
+* Fetch all db resources in one query
+* resource_get_all_by_stack returns a dict
+* Stop periodic watcher tasks before deleting stack
+* Update olso modules
+* Use keypairs.get instead of keypairs.list()
+* resource-list fails on a failed resourcegroup stack
+* Revert "Support ... x-forwarded-for header"
+* Update common docstrings to match guidelines
+* Ignore nova limits set to '-1'
+* SoftwareDeployments tolerate string zero status code
+* Don't use SSH in Rackspace::Cloud::Server
+* Make Server CONFIG_DRIVE property a boolean
+* Add ISO 8601 date constraint
+* Include exception in custom constraints errors
+* Add database model to store snapshots
+* Refactor DB resource fetching from Resource to Stack
+* Do not query database for every metadata_get
+* Use resource methods for metadata get/set
+* Do not initialise stack_user password
+* Clean up openstack-common.conf
+* Deprecate Stack.resolve_runtime_data()
+* Pass unresolved template to Resource.update()
+* Unit tests: tidy up resolve_runtime_data() calls
+* Autoscaling: compare fully-resolved templates
+* Add a Nova Flavor resource
+* Use the new oslotest library
+* API changes for param to show soft-deleted stacks
+* Rolling updates for OS::Heat::AutoScalingGroup
+* Engine changes for API param to show soft-deleted stacks
+* Shut the heat-engine after all threads finished
+* Don't dynamically create provider types in the global env
+* Skip tests when loading plugins
+* Refactor boolean conversion into a separate function
+* tests remove stack_delete_after decorator
+* Deprecate first_address attribute of Server
+* Using attribute schema for building documentation
+* Truncate status_reason to column length
+* unit tests: Don't mess with template retrospectively
+* unit tests: Check validation in VPC test
+* Don't wrap HeatExceptions during validation
+* unit tests: Test dependency resolution using validate()
+* Raise InvalidTemplateReference for missing resources
+* Synced jsonutils from oslo-incubator
+* Fixes stack rollback failure with AWS::EC2::Instance
+* Restores Nova API for volume attach and detach
+* Allow empty sections in the yaml templates
+* Support proxying Heat API by using x-forwarded-for header
+* tests remove wr_delete_after decorator
+* tests make dummy db setup/reset consistent
+* Prefetch data in resource_get_by_name_and_stack
+* Port all resources to new resource data methods
+* An IO optimised method for accessing resource data
+* Distribute create_heat_domain
+* Fix all flake8 problems
+* Order and separate imports properly
+* Make events return by insertion order
+* Fix many typos
+* Update openstack-common in prep for graceful stop
+* Remove unused logger
+* Fix validate failed with an image_name in uuid format
+* Don't manipulate template during abandon
+* Don't manipulate LoadBalancer template in-place
+* Change volume size property type to integer
+* Document the availability of OS::stack_name and OS::stack_id
+* Adding attribute schema class for attributes
+* Imported Translations from Transifex
+* Catch NotFound for keystone delete operations
+* Optional data for resource_data_get_all
+* Add a log info message in Stack state_set
+* Make Docker property schema similar with others
+* Don't pass enable_snat by default in Router
+* Move API parameter parsing from engine to API
+* Fix wrongly printed count of received handled conditions
+* Avoid redundant polling of DB for metadata
+* Support multiple heatclient versions for SD
+* Make template validation uniform
+* Push COMPLETE status change at the end of update
+* Check that all po/pot files are valid
+* Allow DesiredCapacity to be zero
+* Implement locking in abandon stack
+* Add hint on creating new user for Heat in DevStack
+* Fix inaccurate error_msg for InvalidTemplateVersion
+* Move some template validation to Template class
+* Use cinder API for volume attach and detach
+* Don't ignore event creation errors
+* Do not use suppport message if it's None
+* Enable lazy translation in unit tests
+* Sync oslo incubator
+* Replace str with six.text_type in tests
+* Tidy up urlfetch.py exception handling
+* Avoid referencing Message.__str__ in exceptions
+* Replace str with six.text_type
+* Sync latest oslo.db code
+* Don't disguise CFN API exceptions
+* Refactor to separate serializers from wsgi controller
+* Add missing test coverage for XMLResponseSerializer
+* Validate user_data_format for server with deployment
+* More specific exceptions when validating params
+* Add documentation for creating a resource plug-in
+* Allow NotFound to be created without args
+* Allow filtering of stacks by action
+* Fix delete event error in postgres
+* Remove testscenarios load_tests
+* Remove unused variable for UpdateReplace exception
+* Cherry pick oslo-incubator db fixes
+* Fix missed whitespace in attribute description
+* Sort requirement files in alphabetical order
+* Expounded on global environments
+* Update status section to indicate HOT is supported
+* Update contrib docstrings to match guidelines
+* Updated from global requirements
+* Add link to a resource's nested stack
+* Cherry pick oslo rpc HA fixes
+* Order imports in alphabetical order (5/9)
+* Add save_admin_pass property to CloudServer
+* Add admin_pass as attribute to CloudServer
+* Ensure outputs are resolved for adopted stacks
+* Catch exception during resolving outputs
+* Add handle_update to VolumeAttachment
+* Refined schema for VPCZoneIdentifier
+* Allow for stack users in _authorize_stack_user
+* Fix timeout for stack actions
+* Fix status reason in events for deployment signals
+* Allow complex scheduler hints for AWS Instance
+* Correct update to zero numbers of health monitors
+* Remove use of py3kcompat
+* Updated from global requirements
+* Using default value during update
+* Fix incorrect logic during updating in unittest
+* Validation functions for resources and outputs
+* Pass and use the environment in validate_template
+* Initial validation of functions
+* Disable check_uptodate.sh check in pep8
+* Add a resource_facade intrinsic function to HOT
+* Resolve data from Resource Facade
+* Add a default DeletionPolicy for Fn::ResourceFacade
+* Check top-level sections when parsing a template
+
+2014.1.rc1
+----------
+
+* Open Juno development
+* Credentials for native heat os-collect-config polling
+* Properly delete OS::Nova::FloatingIPAssociation
+* Run pep8 check in run_tests.sh as in tox
+* version migration fails if version is an integer
+* Remove unused code in test_validate.py
+* Fix Jenkins translation jobs
+* Fix incorrect error msg in validate_template()
+* Don't log exception for None timeout_mins
+* Always answer empty list if deployments not ready
+* Imported Translations from Transifex
+* Validate that resource type is a string
+* OS::Nova::Server depend on subnets related to nets
+* Migrate invalid template version values
+* Fail if non-existent security group referenced
+* Order imports in alphabetical order (8/9)
+* Fix using attributes in unittest
+* Update heat.conf.sample
+* Ensure parameter timeout_mins available in update
+* Raise and catch a specific error during validation
+* Make sure NetworkInterfaces and SubnetId updatable
+* Make OS::Nova::Server networks property updatable
+* Don't catch all exceptions in image constraint
+* Revert "Add validation to KeyPair resource"
+* Don't create cloud-init user unless specified
+* Add docker network_gateway attribute
+* Change router's prop name agent_id to l3_agent_id
+* Add subnets as a dependency for router
+* heat is enabled by default in devstack now
+* Properly encode heat.common.exception in rpc
+* Error and NotFound inherit HeatException class
+* Store stack domain credentials for deployments
+* Document software config classes
+* Display container ip not gateway IP
+* Fix creating docker containers
+* Fix stack-show failed with a name in uuid format
+* Reimplement DHCPAgent as net's property
+* Provide the necessary inputs to enable HEAT_SIGNAL
+* Implement an identifier stack_path()
+* Fix heading markup in hot_spec.rst
+* Using resolving properties for update
+* Stack identity reads tenant from stack not context
+* Don't re-bind parameters during stack update
+* Fix user provider template registration
+* Add documentation to the firewall properties
+* Catch NotFound exception on user delete_key
+* Never specify project_name in keystone v3 auth
+* Order imports in alphabetical order (7/9)
+* Insertion port id in address attribute of server
+* Propagate files in nested stacks
+* Get rid of global variable in JSON->YAML conversion
+* Remove auth_token condition in clients
+* Fix typo in HOT spec
+* Tolerate None outputs on deployment handle_signal
+* Add name property to StructuredDeployment
+* policy.json allow all users to do stacks:lookup
+* Include environment resource in documentation
+* Generate local TemplateResource class
+* Use six.move.xrange to replace xrange
+* Refactor CLB to work with groups
+* Add events for automation statuses to Cloud Server
+* Fix update of Pool's list of HealthMonitors
+* remove attributes from OS::Heat::AutoScalingGroup
+* Replacing NetworkGateway when devices updated
+* Order imports in alphabetical order (4/9)
+* Reimplement L3Agent as router's property
+* Move load_user_creds out of StackWatch
+* KeyError generated when using a provider template
+* Devstack getting started, update IMAGE_URLS
+* Default properties to the empty dict in ResourceGroup
+* Add space to description of stack_domain_admin
+* Fix HOT inconsistencies in resource sections
+* Use stack ID to create domain project name
+* Modify assert statement when comparing with None
+* Refactor Template.parse()
+* Removing unnecessary required=True options
+* Allow update of disable_rollback
+* Improve compatibility between Keystone V2 and V3
+* Order imports in alphabetical order (6/9)
+* Order imports in alphabetical order (1/9)
+* Return template based class in list resource types
+* Remove unused versions define in template_format.py
+* Account for stack_user_project_id in stack_get_by_name
+* Resource type implementations for structured software config
+* Resource type implementation for software deployment
+* Remove signal_id from deployments API and model
+* Server property for software config transport
+* OS::Nova::Server support for software config
+* Fix InternalException raised on stack-show
+* Delete user_creds on stack delete
+* Add more unit tests for ThreadGroupManager
+* Fix start_with_acquired_lock - pass kwargs to func
+* Fix some help strings in common/wsgi.py
+* migrate User/AccessKey resources to StackUser base class
+* StackUser add _delete_keypair function
+* Refactor stack watching into a separate class
+* Remove decorators for exceptions
+* Handle 503 response from Nova API
+* Retry logic for SSH connection in Cloud Server resource
+* Ensure that the NoCloud data source is loaded, part 2
+* Provide attribute schema for waitcondition resource
+* Fix AccessPolicy update with added resources
+* Make template formats pluggable
+* Add an InvalidTemplateVersion exception
+* Move HOT template code to its own module
+* Add user_creds_delete to the DB API
+* fix DB API user_creds_get for non-existent ID
+* Make user_creds_id a parser.Stack attribute
+* Fix HOT set_stack_id
+* heat_keystoneclient don't pass project and trust_id
+* Fix resolving for Ref function
+* Add state check when suspend or resume stack
+* Revert "Showing member list for nested resources"
+* Allows vip from a different subnet for lbaas resource
+* Add test for StackUser._create_keypair
+* StackUser add suspend/resume support
+* heat_keystoneclient add delete_stack_domain_user_keypair
+* heat_keystoneclient add legacy fallback path
+* Fixup uuid stubbing in test_stack_user.py
+* Move HOT parameters code to a separate module
+* Load functions from plugins
+* Use PluginManager to load resources
+* Add tools/create_heat_domain helper script
+* Allow handle_signal to assert which actions are valid
+* Allow getting attributes on suspended resources
+* Nova server to ref cloud-config resources in user_data
+* Return None when get_attr cannot resolve a value
+* Allow proper instance with volume suspension
+* Add IP address to error message of failed stack
+* Make the first line of every file consistent
+* Native ScalingPolicy resource
+* Remove vim header from files
+* replace dict comprehension with dict constructor
+* Implement OS::Neutron::ExtraRoute as /contrib
+* Always report the action in state_reason as engine encodes it
+* Convert empty filter dictionary to None
+* Allow Server name property to be updated
+* Docs: use the plugin manager to list resources
+* Move the code that reads the global environment
+* Add a plugin_manager module
+* Calculate template version only once
+* Give cfn a separate Template class
+* Move HOT version checking to HOTemplate class
+* Handle API limit exception in nova_utils.refresh_server
+* Make server resources use nova_utils.refresh_server()
+* migrate StackUser base class to stack domain users
+* engine: allow stack_user_project users to retrieve stack
+* Add config options to specify stack domain admin
+* Modify stack_user_domain config option to take domain ID
+* Nova keypair validation breaks client plugins
+* Add Keystone V2 plugin
+* Make Keystone client pluggable
+* Add host_routes property to Neutron subnet resource
+* Adds Parameter Label to template validate call
+* Generate docs for contrib plugins
+* Restructure contrib/ directories
+* Set statuscode=404 in NotFoundException in tests
+* Add a validation step to parameters schema
+* Add admin_pass as a property
+* Update Oslo wiki link in README
+* Remove unused variable
+* I18N support for log message and attributes schema
+* Change software_config storage of config and io columns
+* Ensure that the NoCloud data source is loaded
+* Don't install cloud-init on Rackspace images
+* Document schema properties for Neutron subnet resource
+* Document schema properties for Neutron router resources
+* Add project to unscoped stack list response
+* Unscoped List Stacks
+* Alter stack_count_all_by_tenant to stack_count_all
+* Fix stack_get_all call on stack watcher
+* Change Resource timestamps to save correct info
+* Change Stack timestamps to save correct info
+* SignalResponder move signed URL deleting to its own method
+* REST deployment metadata method
+* RPC method to fetch deployments metadata
+* Fix typo and remove unused code in nova_utils.py
+* Raise NotFound in software_config_get/software_deployment_get
+* Docs: use pydoc to read docstrings
+* Convert AccessKey resource to attributes_schema
+* Remove redundant FnGetAtt from User resource
+* Order imports in alphabetical order (3/9)
+* Check that 'heat_template_version' is a HOT version
+* Add validation of nested property schema
+* Replace '+' with string interpolation operation
+* Remove unused output section from test template
+* I18N support for error message
+* Tidy up rpc_client definitions
+* Updated from global requirements
+* Adding "device_owner" property for Port resource
+* Replace hard code in software_deployment REST api
+* Doc generation display message for deprecated resources
+* Use property support_status in documentation generation
+* Use support_status for existing deprecated properties
+* Remove redundant default value None for dict.get
+* add OS::Heat::AutoScalingGroup
+* Fix test for cloud loadbalancer
+* Add Docker resources to docs
+* Change Docker resource mapping name
+* Fix resource mapping for Docker
+* Changed Openstack into OpenStack in contrib.rst
+* Move X-Auth-Url logic to auth_url middleware
+* Add flavor constraint
+* Rackspace Cloud Networks resource
+* Fix resource mapping for Rackspace
+* Add support_status attribute to properties schema
+* Refactor SupportStatus into its own module
+* Add ability to create provider networks (vlan,flat)
+* Move refresh_server() to nova_utils
+* Add systemd notification support to heat
+* Order imports in alphabetical order (2/9)
+* Parse stack_adopt_data
+* Environment template guide enhancement
+* Implement glance image constraint
+* Add neutron network constraint
+* Remove Fn::FindInMap from HOT
+* Move built-in functions to separate modules
+* Disallow Heat-only functions in CloudFormation templates
+* Provide access to the template version
+* Move HOT to a separate subpackage
+* Replace function resolution with lazy evaluation
+* unit tests: Refactor to accomodate lazy evaluation
+* unit tests: Fix types in Fn::ResourceFacade tests
+* Fix test_association_eip unit test
+* unit tests: Always resolve static functions
+* Evaluate lazy functions in autoscaling launch config
+* Server secgroups and network/port together invalid
+* Replace stack_get_all_by_tenant with stack_get_all
+* Revert "Merge "Re-enable lazy translation""
+* Add Heat API reference to developer docs
+* Implements resource type NetworkGateway
+* run_tests.sh default doc omits pep8
+* Add preview for LoadBalancer
+* Add preview for TemplateResource
+* Add preview for InstanceGroup
+* Add preview for ResourceGroup
+* Add preview for NestedStack
+* Add StackResource specific preview behavior
+* de-hardcode adjustment type strings in autoscaling
+* Replace hardcoded schema strings in autoscaling.py
+* REST API for software deployment
+* Calculate dependencies based on unresolved template
+* Re-resolve functions during stack update
+* Refactor re-resolving of templates
+* Add a base class for pluggable functions
+* Prevent user introspection of Python objects
+* Remove spurious tracebacks from tests, part 2
+* Add API support for stack preview
+* Add engine preview stack with Template and Params
+* Refactor resource loading functions
+* Revert config mocking to cfg.CONF.set_override
+* Remove empty unit test directory
+* Don't disable SELinux in cloud-init's boothook.sh
+* Enable usage of custom constraint in parameters
+* Use six.moves cStringIO instead of cStringIO
+* Re-enable lazy translation
+* Fix incompatibilities in tests with keystoneclient 0.6
+* Native Nova Server compatibility for Cloud Server
+* RandomString use the random string as the resource_id
+* Display max_template_size when a template is too large
+* Switch over to oslosphinx
+* Fix usage of resource_data_get_all in stack-abandon
+* Add validation to KeyPair resource
+* Rename Openstack to OpenStack
+* Improve help strings
+* Add a nova keypair constraint
+* Use integer when appropriate in autoscaling schema
+* Fix errors in hot_spec doc
+* Refactor SignalResponder to abstract user logic
+* heat_keystoneclient add support to enable/disable domain users
+* Remove spurious tracebacks from tests
+* Don't try to stop a stack on a dead engine
+* Restructure Marconi plugin directory structure
+* Separate the Marconi client from the resource
+* Add a requirements file for contrib/rackspace/
+* Implement custom constraints
+* Remove TODO comments in create_resource
+* REST API for software config
+* Verify that parsed environment file maps to a dict
+* Fix misspellings in heat
+* Add Rackspace resources summary to docs
+* Delete rackspace database resource
+* Provide region_name to trove-client
+* heat_keystoneclient add create_stack_domain_user_keypair
+* heat_keystoneclient add delete_stack_domain_user function
+* heat_keystoneclient add create_stack_domain_user function
+* heat_keystoneclient raise error if stack user role missing
+* Add parser.Stack support for stack_domain_projects
+* Change access to ceilometerclient
+* Imported Translations from Transifex
+* Add personality files property to Server resource
+* HOT templates get_param allows extra attributes
+* Make Server compatible with Nova Key Pair resource
+* Retrieve user_id from HTTP Headers to populate Context
+* Rename docker_plugin to docker
+* Rename Marconi plugin package
+* Don't raise MySQL 2013 'Lost connection' errors
+* Adding option in config to specify region name
+* Add unit tests for heat.scaling.template
+* Fix default raw_template files value in migration
+* Move resource_templates to heat.scaling
+* Refactor _create_template to not rely on instances
+* Do not log error on software config/deployment NotFound
+* Handle API 500 response in OS::Nova::Server
+* Handle API limit exception in OS::Trove::Instance
+* Adds Parameter Label to HOT spec and parameter schema
+* Implement HOT intrinsic function get_file
+* Rename rackspace.rst to contrib.rst
+* Reorganize docker-plugin for consistency
+* Restructure Rackspace resources
+* Delete fixed_ips if it's empty list
+* Create heat database with default character set utf-8
+* Allow an in-progress stack to be deleted
+* Ensure stack lock is released after stack-delete
+* Updates template_validate call to validate parameter_groups
+* Fix indentation errors found by Pep8 1.4.6+
+* heat_keystoneclient add support for stack domain projects
+* New Event uuid column and autoincremental id
+* tests remove test_heatclient unnecessary mock
+* RPC service for software config/deployment
+* A cloud-config resource based on SoftwareConfig
+* A multipart cloud-init resource based on SoftwareConfig
+* Resource type for software configuration
+* Verify setenforce is executable
+* Implement native signal API
+* Updated from global requirements
+* Update heat.conf.sample for python-keystoneclient 0.5.0
+* test_signal add missing VerifyAll calls
+* Translate constraint description in validation
+* Raise the default max header to accommodate large tokens
+* Store files in the raw_template table
+* heat_keystoneclient: abstract admin_client to a property
+* heat_keystoneclient: Move v3 path logic to constructor
+* heat_keystoneclient ensure admin client respects SSL options
+* Make context available during constraint validation
+* Imported Translations from Transifex
+* Map the NotFound exception to HTTPNotFound
+* Only update_and_save if the stack exists
+* serialize non-string nova metadata
+* Prevent access Parameters key in template dict
+* Native Pseudo Parameters
+* Use a HeatIdentifier instance to create Parameters
+* HOT templates get_attr allows extra attributes
+* Fix event_type names for stack CRUD notifications
+* Purge remaining heat_keystoneclient v2 code
+* Fix user and signal responder exception import
+* heat_keystoneclient convert delete_ec2_keypair to v3 API
+* heat_keystoneclient convert get_ec2_keypair to v3 API
+* API tolerate None environment string
+* Fix AWS::StackId pseudo-parameter during stack update
+* Ensure some properties update_allowed on port res
+* Don't run pep8 tests with -P
+* Enabled source code coverage for contrib directory
+* Fix handle_create of NetDHCPAgent for updating
+* raw_template hot parameter type data migration
+* stub cfg.CONF in heat_keystoneclient
+* Add autoscaling notifications
+* Refactor Parameters Schema based on common Schema
+* Move param format for template-validate to API
+* fix some flaws in heat documents
+* Add qpid-python to requirements
+* Marconi message queue resource implementation
+* Fixes template not using the JSON or YAML format
+* Add heat.sqlite in git ignore list
+* Updated from global requirements
+* Global environment ignores files starting with dot
+* Refactor software config db model to use LongText
+* Added testr-args option support for tox coverage
+* Fixed OS::Neutron::Pool creation
+* Showing member list for nested resources
+* Update oslo db
+* Update olso gettextutils
+* Update base oslo modules
+* Fix order of arguments in assertEqual (patch 1/2)
+* "version" section should be required in template
+* Assign X-Auth-Url header in a separate middleware
+* Store credential ID for AccessKey and SignalResponder
+* heat_keystoneclient migrate create_ec2_keypair to v3 API
+* Don't delete trust on backup stack delete
+* Make LB-updating in rolling update more reliable
+* Don't pass empty security groups in port creation
+* add the validation of MaxSize ,MinSize and DesiredCapacity
+
+2014.1.b2
+---------
+
+* Implement adopt-stack for nested stacks
+* Implement adopt-stack
+* Always specify preserve_ephemeral on server rebuild
+* Document Heat terms in glossary.rst
+* Fix error in RS Auto Scale properties schema
+* Fix adding heat_stack_user role via v3 API
+* Refactor heat gate testing contrib support
+* Ignore tox -e cover generated files
+* Database model for software config/deployment
+* Add a new ThreadGroupManager class
+* Make endpoint_type configurable
+* Fix OS::Neutron::Pool validation
+* Fix order of arguments in assertEqual (patch 2/2)
+* Remove dependencies on pep8, pyflakes and flake8
+* Fix syntax error in docs
+* Allow choice in how SignalResponder user id is stored
+* Fix incorrect resource types in docs/comment/code
+* new method 'HeatTestCase.patchobject'
+* heat_keystoneclient migrate auth_token/service_catalog to v3 API
+* Convert heat_keystoneclient user enable/disable logic to v3 API
+* Convert heat_keystoneclient user-delete logic to v3 API
+* Convert heat_keystoneclient user-create logic to v3 API
+* Turn block_device_mapping.volume_size to int
+* Refactor MySQL long text support
+* Add a new "UpdateWaitConditionHandle" resource
+* Enable better sub-classing of common Schema class
+* Adding Range constraint for SIZE property
+* Fix ceilometer alarm properties schema
+* Remove heat-cli-guide
+* Use oslo crypto
+* Use region for cinder management uri
+* New middleware to handle SSL termination proxies
+* Add _() to rackspace resource strings
+* Added heat url in config for heat standalone mode
+* Let Integer property convert strings to numbers
+* Add stack id and resource id in logs
+* Update heat.conf.sample
+* Fix comparison with singletons
+* Fix asserttion of types
+* Fix showing events on swift
+* update pom.xml files with clouddocs-maven-plugin version 1.12.2
+* Don't query for resource during stack creation
+* Using _handle_not_found_exception in resources
+* Implement neutron metering resources
+* Remove superfluous tag schema from Volume
+* Include a format version in generated templates
+* Generate provider templates with Boolean params correctly
+* Correct use of Fn::Split in generated provider templates
+* Convert Server to new Schema format
+* Use the new Schema class for template generation
+* Close SSH connections in Cloud Servers resource
+* Add filter and pagination to stack_get_all
+* Fix heat-keystone-setup error when try to create heat user
+* Implements Nova FloatingIP resources
+* Add way to group exceptions in DependencyTaskGroup
+* Fix unused variables 2/2: enable unused var check
+* Fix unused variables 1/2: add more asserts
+* heat_keystoneclient revise get_ec2_keypair
+* Store AccessKey secret_key in resource data
+* Update Loadbalancer default template to F20 image
+* Tolerate deleted trust on stack delete
+* Fixes duplicate calling add_constructor()
+* Service authorize stack user from provided stack
+* Add contrib to py26 and py27 gates
+* Fix more regressions in contrib
+* Avoid error on double-delete of nested stack
+* Enable parallel while deleting neutron resources
+* Add ability to configure Heat and Trove client options
+* Remove override of "patch" function
+* remove obsolete comment from rackspace clients.py
+* Fix schema format in template generation unit tests
+* Validate number of instance metadata entries
+* Introduce a way to trace a resource's implementation
+* Add policy enforcement to ReST API
+* Replace try...except...pass block with assertRaises
+* Add documentation for multi-engine
+* Make LoadBalancer nested stack template configurable
+* Improve tools/uninstall-heat
+* Refactor Instance#_check_active
+* Add migration method to test sqldump files
+* Test db migration 31
+* I18N support for InvalidContentType exception
+* Fixes typo of explanation on exception.py
+* Fix get_column_num problem in heat-keystone-setup
+* Use oslo db.migration script
+* update rackspace clients.py
+* log warning, when $SERVICE_HOST is localhost
+* Remove usage of mox class
+* Sort the output of config/generator.py by group name
+* "mountpoint" should not be required parameter
+* Deleted TEMPDIR on exit
+* Update log message for scale out/in
+* Remove redundant word from OS::Nova::Server
+* Enhance message for watch rule
+* Fix regression in Rackspace Cloud Servers tests
+* Add test for AutoScalingGroup resize and metadata
+* Imported Translations from Transifex
+* Rename scaleout_apis.rst -> scale_deployment.rst
+* Use WithScenarios base class instead of load_tests
+* Filter resource types by support status
+* Do not use python built-ins as variable names
+* Add test coverage for SignalResponder delete
+* Fix SignalResponder signature response when deleted
+* Fix a typo in the README for docs
+* Empty files shouldn't contain copyright nor license
+* Imported Translations from Transifex
+* Don't provide default values to properties.get()
+* Added session_persistence property to VIP
+* Updated from global requirements
+* Add new Ceilometer combination alarm resource
+* Imported Translations from Transifex
+* Change loglevel for certain failures
+* Let users specify metadatas on swift accounts
+* Do not override cloud-init cloud_config_modules
+* Fix misused assertTrue in unit tests
+* Add migration test framework
+* Remove unnecessary setUp call
+* add assertion to heat-keystone-setup script
+* Simplify update_with_template() method
+* Fix copy/paste errors in API docstrings
+* Convert Neutron resources to new Schema format
+* wsgi.Resource exception handling to not log errors
+* SignalResponder store access/secret in resource data
+* SignalResponder, set resource_id in the correct place
+* Add sanity check to ensure user_id can be trusted
+* Correct create_trust_context docstring
+* Fix comparison with singletons
+* Add an external gateway property to neutron router
+* rackspace: Convert resources to new Schema format
+* Prevent tempest from failing upon ActionInProgress
+* Add nested resource references to resource group
+* Add support for rebuild --preserve-ephemeral
+* Don't pass swift headers as None
+* Convert AWS network resources to new Schema format
+* Use property name constants in CinderVolume
+* Convert [Cinder]VolumeAttachment to new Schema format
+* Add a schema for the AWS::EC2::Instance Volumes property
+* Convert Instance to new Schema format
+* rackspace: Convert CloudLoadBalancer to new Schema format
+* rackspace: Convert Scaling resources to new Schema format
+* EventService exception handling to not log errors
+* WaitCondition Count property is now updatable
+* Use property name constants in Ceilometer alarm
+* Remove useless validate methods
+* Add support for multiple encryption methods
+* Imported Translations from Transifex
+* oslo: add the crypto module
+* Improve autoscaling error message
+* Convert numeric values in instance metadata to strings
+* Add oslo mock fixture
+* Fix misused assertTrue in unit tests
+* Fix stack_get_by_name does not list nested stack issue
+* pep8 fix: assertEquals -> assertEqual
+* Change assertTrue(A in B) to assertIn(A, B)
+* Adds parameter_groups to HOT specification
+* Convert OSDBInstance to new Schema format
+* Convert resources to new Schema format
+* Convert Swift resources to new Schema format
+* Convert User resources to new Schema format
+* Convert Autoscaling resources to new Schema format
+* Convert Ceilometer Alarms to new Schema format
+* tests: Don't access properties_schema directly
+* Convert [Cinder]Volume to new Schema format
+* Enables db2 server disconnects to be handled pessimistically
+* Add OS::Neutron::RouterL3Agent for router.py
+* Deny API requests where context doesn't match path
+* Add validation for an existence of a resource type
+* Fix missing policy enforcement in CFN API
+* Add support for network name for os::nova::Server
+* Make the mountpoint property description clearer
+* Don't replace (and log) the same resource entry
+* Remove unused variable badkeys
+* Sync global requirements to pin sphinx to sphinx>=1.1.2,<1.2
+* oslo: update the remainder of the modules
+* oslo: add the test module needed by test_migrations
+* Utilize stack-lock for multi-engine support
+* Implement engine listener service for multi-engine support
+* Implement stack-locking for multi-engine support
+* heat-manage man page not generated in doc build
+* Allow docker plugin to run w/o deps
+* Sync oslo threadgroup.py to fix wait & stop methods
+* Database changes for multi-engine support
+* Document Port properties
+* Imported Translations from Transifex
+* Add OS::Neutron::NetDHCPAgent for neutron/net.py
+* Remove unused dumps validation in JsonParam value
+* Remove oslo uuidutils.generate_uuid from heat code
+* Sync oslo rpc
+* Update tox.ini to use new features
+* Replace try...except block with assertRaises
+* Add load balancer PoolMember resource
+* Allow intrinsic functions to be called in any order
+* Instance call build_userdata directly
+* Make build_userdata user_data_format aware
+* Account for truncated resource names in test PhysName
+* Fix regression in cloud server tests
+* Clean up useless ex variable
+* Imported Translations from Transifex
+* Set the rpc control_exchange "again"
+* oslo: update the rpc module
+* oslo: update config generator
+* Use the new oslo py3kcompat.urlutils
+* oslo: add py3compat
+* oslo: delete rpc/securemessage.py
+* contrib: Add Docker Container plugin
+* Properly reconnect subscribing clients when QPID broker restarts
+* Call cfn-create-aws-symlinks in boothook.sh
+* Add REST endpoint for abandon-stack
+* heat engine changes for abandon-stack
+* Change ID column of Event table to UUID
+* Fix error in Trove Instance schema definition
+* Fix stack-show on a TemplateResource with outputs
+* Handle TemplateResouces with the wrong template extension
+* Pass the files correctly though the update mechanism
+* Add SupportStatus class for resources
+
+2014.1.b1
+---------
+
+* tests: use server.test not example.com
+* Add collection count to stack list
+* Property methods for resource metadata
+* Openstack Trove (DBaaS) resource
+* Fix bad resource schema for Volume
+* Add attributes schema to OS::Neutron::FloatingIP
+* Restrict sort_keys for stack lists
+* Return map parsed value at JsonParam.value
+* Make db API respect context show_deleted
+* Bump to sqlalchemy-migrate 0.8.2
+* Add heatclient to available clients
+* Provide access to Trove client
+* run_test.sh -V --unit doesn't run using virtualenv
+* Factor Schema out of properties.py for re-use
+* Sync DB2 error code handling from oslo
+* Add a .coveragerc to exclude tests and oslo
+* Remove unused fake test code
+* Remove duplicate test scenario
+* Remove property decorator in TemplateResource
+* Migrate away from rackspace_resource
+* Fix show_deleted errors in RequestContext
+* Remove owner_is_tenant from RequestContext
+* Remove misleading docstrings in ContextMiddleware
+* Derive context is_admin from policy
+* Fn::Replace support for type Number
+* VersionNegotiation - 404 if no version is provided
+* Make engine service docstrings conform to Sphinx
+* Imported Translations from Transifex
+* Add check_is_admin to common.policy.Enforcer
+* Ensure that members is a list
+* Catch error deleting trust on stack delete
+* Fix not correct AWS::StackId value
+* Avoid eventlet-unsafe exception handling
+* Let resources decide when to update
+* Remove external AWS links and add doc if needed
+* Add API endpoint to query build information
+* Implement PrivateIpAddress attribute
+* Sync openstack.common.local from oslo
+* Use all available headroom for autoscaling
+* Use ScaledResource as type for InstanceGroup members
+* test_common_policy cleanups
+* Clean up "target" interface to policy
+* Remove param explode_nested from doc
+* Add coverage for trusts parser.Stack delete path
+* Add test for OS::Heat::HARestarter
+* Improve coverage of storing credentials in parser.Stack
+* Fix BaseException.message DeprecationWarning
+* Adds ability to configure various clients used by the Heat
+* Define deletion policy constants
+* Add filter support to stack API
+* FaultWrapper error mapping supports parent classes
+* Add exact filter support to SQL API list stacks
+* Add a missing mock to rackspace cloud server test
+* Added support for Allow-Address-Pairs feature
+* Fix i18N compliance with non-existant keypair
+* Fix the middleware MIME type
+* Fixes bullet list without blank line issue
+* Doc usage enhancement
+* Make heat depend on python-heatclient
+* Remove Component class
+* Fix some docs errors/warnings
+* Add a guide to setup standalone mode
+* Fixes Error when contain Non-ascii in template
+* Add _() to fix i18N compliance (part 2)
+* Make instance Tags updatable
+* Allow nova metadata to be updated
+* Get pool members from DB API
+* Add _() to fix i18N compliance (part 1)
+* Implement a Heat-native resource group
+* Add links section to the stacks index response
+* Add support for limiting and sorting stacks
+* Don't use the last server fake, but the one we want
+* Ensure autoscaling actions occur for percentage adjustment
+* Update install.sh to reflect recent oslo.db format
+* Remove unused db/sqlalchemy/manage.py
+* Revert "Implement stack-locking for multi-engine support"
+* Implement Tags for S3 bucket
+* Add property doc strings for S3 bucket
+* Fix some direct imports from sqlalchemy
+* Move resource doc generation to doc/source/ext
+* Fix server update attribute test
+* Shorten physical resource name to custom limit
+* Managed Cloud compatibility for Cloud Servers
+* Refresh Cloud Server data for RackConnect check
+* Use get_secgroup_uuids in Instance
+* Rewrite get_secgroup_uuids to avoid resource_by_refid
+* Implement stack-locking for multi-engine support
+* Imported Translations from Transifex
+* Rename exception NoUniqueImageFound
+* Implement update for neutron port resources
+* Implement update for neutron router resources
+* Using a number in str_replace causes an exception
+* Refactor tests to use mock
+* Fix "members" property check
+* Imported Translations from Transifex
+* Add property documentation for the waitcondition
+* Set the waitcondition maxvalue to 12 hours as AWS specifies
+* Implement update for neutron subnet resources
+* Implement OS::Neutron::SecurityGroup
+* Implement update for neutron network resources
+* Imported Translations from Transifex
+* Create a guide for scaling out Heat API's
+* RackConnect compatibility for Cloud Servers
+* Check that the epel repo exists before adding it
+* Add a man page for heat-manage
+* Imported Translations from Transifex
+* Send usage notifications on major stack events
+* Rename admin flag on SqlAlchemy#stack_get
+* Make check_uptodate compatible with BSD shells
+* Add Rackspace Cloud DNS Resource
+* Resources for Rackspace Auto Scale
+* Implement volume tags as metadata
+* Imported Translations from Transifex
+* Ensure apt-get installs do not prompt user input
+* Add a link method to Thread
+* Make Fn::Select accept an integer selector again
+* Stop irratating pep8 error in test_clouddatabase.py
+* Assert that all function exceptions have the function name
+* Only log to console in heat-db-setup
+* Move all possible function tests into scenarios
+* Change heat-api.org to openstack.org
+* Add doc support for update_allowed
+* Instance delete should check for 'DELETED' status
+* Imported Translations from Transifex
+* use exception str() not .message
+* change neutron to use UpdateAllowed property schema
+* change alarms to use UpdateAllowed property schema
+* change contrib/ to use UpdateAllowed property schema
+* change base resources to use UpdateAllowed property schema
+* Support defining update_allowed in the property_schema
+* Fix nested stack test setUp ordering
+* Delete deprecated docs/ directory
+* Tolerate lookup failures in Fn::Select
+* use msg_fmt not message in Exceptions
+* Stub out unmocked keystone in test_engine_service
+* Stub out unmocked keystone auth in signal tests
+* Reverse assert arguments so the errors make sense
+* Updated from global requirements
+* Prove that a user can't remove global resources
+* Use resource_id_set to clear resource ID's
+* Fix sqlalchemy migrations
+* Fix sqlalchemy models
+* change assertEquals to assertEqual
+* Imported Translations from Transifex
+* Allow user_data to be passed without modification
+* Add rebuild to OS::Nova::Server
+* Refactor Nova server resizing to be self contained
+* Repeat Ceilometer alarm actions by default
+* Allow plugins to be specified as a cloud_backend
+* Updated from global requirements
+* Imported Translations from Transifex
+* Document route table properties
+* RS LoadBalancer should return its ID as Ref
+* Document subnet properties
+* Document vpc properties
+* End doc sentences in a consistent way
+* Document security group properties
+* Document network interface properties
+* Add support to disable resources
+* Move db_sync into the sqlalchemy DB api
+* Correct misleading template guide Ref example
+* Add granularity option to purge_deleted
+* Imported Translations from Transifex
+* Updated from global requirements
+* Add a test for TimeoutInMinutes accepting a str int
+* Catch all yaml exceptions
+* Make the template and env yaml parsing more consistent
+* Updated from global requirements
+* Fix incorrect indentations found by Pep 1.4.6+
+* Prevent urlfetch from returning encoded chars
+* Use "python -m coverage" instead of coverage cli
+* Stop using openstack.common.exception
+* Update openstack.common.db
+* Imported Translations from Transifex
+* Convert str passed as Numbers/Integer to numbers
+* Wrap engine exceptions in _()
+* Wrap common exceptions in _()
+* Wrap api exceptions in _()
+* Allow RS LoadBalancer resource to have no nodes
+* Updated from global requirements
+* Add requests library to requirements.txt
+* Provide more tests for DB APIs
+* Make Autoscaling update policy tests faster
+* Remove spurious traceback in test
+* Remove a buggy method in sqlalchemy.api
+* Imported Translations from Transifex
+* Updates OpenStack Style Commandments link
+* Imported Translations from Transifex
+* Don't allow updates when another action is in-progress
+* Do not attempt a stack update when it is suspended
+* Implement native Nova keypair resource
+* Allow flavor and image names in CS resource
+* Ignore H803 from Hacking
+* Enable exception format checking when testing
+* Validate template parameter attributes
+* Fix regression in DBaaS tests
+* Revert "Don't install EPEL rpm on CentOS 6.4"
+* Imported Translations from Transifex
+* Allow DependsOn to accept a list
+* Add property port_id to RouterInterface
+* Add log_handler to implement the publish_errors config option
+* Add keystone_authtoken section into the heat.conf.sample
+* Pass errors from *_format.parse() to the caller
+* Imported Translations from Transifex
+* Raise error if instances are created with names > 63 chars
+* Fix heat deletion failed if floating ip is not found
+* Imported Translations from Transifex
+* Allow overriding the instance_user per server
+* Return Integer or Float casted value in NumberParam
+* Move check_uptodate.sh into config/ and delete tools/conf
+* Start using tools/config instead of tools/conf
+* update the config generator from oslo
+* Updated from global requirements
+* Fix some docs warnings and errors
+* Remove obsolete redhat-eventlet.patch
+* Add cinder prop image, deprecate imageRef
+* DB API : tolerate None values to _encrypt
+* Fix RequestContext.to_dict user/username inconsistency
+* A resource to generate random strings
+* Fix possible race issue with test_engine_service
+* Begin 3 chapters for Orch API Ref Manual
+* Migrate to Oslo DB 96d1f887dda Part 3
+* Update openstack.common.policy from oslo
+* Make templateResource not replace on update
+* Fix the signal details string
+* Rolling update support for Instance/AutoScalingGroup
+* Fail stack-create if script exits with non-zero status
+* Add help for purge_deleted command age argument
+* Catch the appropriate exception for missing instance
+* Don't install EPEL rpm on CentOS 6.4
+* Increase support for the AllocationId property
+* Save parse errors in TemplateResource for later
+* Create a better exception in Fn::Replace
+* Update some cases of iterating stack resources
+* Don't try validate TemplateResource properties in template_validate
+* Cleanup nested loop variables in TemplateResource
+* Fix clashing loop variables in TemplateResource
+* Move the registration of the global env to after plugin resources
+* Make the testing of resource loading easier
+* allow "members" property to be absent
+* It is necessary to update pool_id for Neutron LB
+* Update resource stacks automatically
+* Implement parser.Stack.__delitem__()
+* Don't iterate over Stack.resources dictionary
+* Get InstanceGroup InstanceList from get_instances()
+* Refactor total_resources
+* Make parser.Stack a proper Mapping
+* Unit tests: don't use status strings from class
+* Don't obtain resources through stack.resources
+* Add contrib to tox pep8 check
+* Handle NetworkNotFoundClient and PortNotFoundClient
+* resource_data saved unencrypted
+* Change pyrax identity_type of Rackspace resources
+* Enabled request_id in RequestContext
+* Make sure that nested stacks have their watch rules checked
+* Start the watcher task if a nested stack has watches
+* Add a new db api stack_get_all_by_owner_id
+
+2013.2.rc1
+----------
+
+* Add some docs on how to setup Ceilometer to use Alarms
+* resource_id check on router gateway, interface delete
+* Handle BadRequest in VolumeDetachTask
+* HOT str_replace default to empty string for param
+* Open Icehouse development
+* Fix F17 CFN link in Getting Started
+* Imported Translations from Transifex
+* Add the "show" attribute to the neurton attribute_schema
+* Add _() around the attributes_schema in net.py
+* heat_keystoneclient: Fix consuming trusts via v2 API
+* Disable lazy translation
+* Updated from global requirements
+* Validate template size during download
+* Log exception traces in APIs
+* Purge ubuntu getting started guide of old info
+* Purge Fedora getting started of old info
+* Remove tools/openstack*
+* Fix inconsitencies in HOT template guide and spec
+* Lazily load resources when loading a Stack
+* Do not assume fixed_ips is a specified property
+* api : default signal body to None
+* Store tenant with trust details in user_creds
+* Conform stack resource error so it gives a 4xx
+* Imported Translations from Transifex
+* Return parsed list value in CommaDelimitedList
+* Make availability zone for CinderVolume optional
+* Document neutron Net properties
+* Provide config option to cap events per stack
+* Handle HOT param constraints in provider templates
+* Do not translate HOT param constraints
+* Add attributes_schema to CinderVolume
+* Make HOT parser errors translatable
+* Document floatingip properties
+* Rename counter_name to meter_name in alarm
+* Add config option to limit max stacks per tenant
+* Document EIP resource properties:
+* Skip None values in fixed_ips when creating Port
+* Remove Neutron VPN resources id attributes
+* Remove Subnet id attribute
+* Remove Router resource id attribute
+* Remove Port resource id attribute
+* Remove Neutron firewall resources id attributes
+* Remove Neutron load balancer resources id attributes
+* Remove Net resource id attribute
+* Remove CinderVolume id attribute
+* api ec2token: allow auth_uri conf to be set via keystone_authtoken
+* api ec2token: Clear failure when no auth_uri specified
+* Imported Translations from Transifex
+* Add method to count events by stack
+* Comparing device name values instead of their reference
+* For Subnet gateway_ip, pass None for empty string
+* Sync gettextutils from oslo
+* Require oslo.config 1.2.0 final
+* Move Rackspace resources into contrib
+* Improve test coverage of stack deletion
+* Stop nested stack updates exceeding resource limit
+* Use name property in OS::Nova::Server if set
+* Format error on urlfetch.get fail
+* StackResource set requires_deferred_auth=True
+* Replace first_public_address/first_private_address
+* HOT str_replace to use string.replace, not string.Template
+* Document internet gateway properties:
+* Consider downloading a valid status for CinderVolume
+* Add the shared property to neutron Net
+* Add tenant_id property to neutron Net and Subnet
+* Allow resource_by_refid returning resumed resources
+* Allow access to attributes of resumed resources
+* Stop stack updates from exceeding resource limit
+* Tolerate bad environment until validation
+* Limit resources per stack in nested stacks
+* Provide config option to limit resources per stack
+* Replace OpenStack LLC with OpenStack Foundation
+* Document neutron health monitor and pool properties
+* Use unicode() when serializing REST API errors
+* Document swift properties and attributes
+* assert_ is deprecated, use assertEqual
+* Document aws loadbalancer properties
+* Nested stack derive requires_deferred_auth from resources
+* Mark reservation_id, config_drive as implemented
+* Sync gettextutils from oslo
+* make get_flavor_id to work if input is flavor id
+* Add 'repeat_actions' property for OS::Ceilometer::Alarm
+* Document nested stack properties
+* Document user properties
+* Use built-in print() instead of print statement
+* Document instance resource properties
+* Document autoscaling resource properties
+* Remove broken tripleo links from on_devstack doc
+* Encode values as utf-8 before encrypting
+* Document neutron vpn service properties
+* Fix misused assertTrue in unit tests
+* Document aws cloud watch alarm properties
+* Document ceilometer alarm properties
+* assertEquals is deprecated, use assertEqual
+* Docs for building heat-cfntools images with diskimage-builder
+* Consistent logging in the API to better log exceptions
+* Use the generic RequestLimitExceeded exception when possible
+* Validate OS::Nova::Server block_device_mapping property
+* Use strings for block device mapping info
+* Add methods to help calculate a stack's resources
+* Add error handling to property value resolution
+* Migrate remaining TEXT columns to LONGTEXT
+* Document volume properties
+* Add security_groups for create_port()
+* Impose a size limit on JSON request body
+* Add HOT functions to dependency checks
+* Use physical_resource_name as Ref for Instance/AS Group
+* Make some heat resolve functions workable in hot
+* Enclose command args in with_venv.sh
+* Pass debug mode to eventlet.wsgi.server
+* Only send traceback to users when in debug mode
+* Change the dbinstance to F19
+* Move dbinstance into a TemplateResource
+* Make global TemplateResources usable in the tests
+* Make the new template validation usable from tests
+* Add DB API to get the count of stacks per tenant
+* Set a small max_template_size for test_long_yaml
+* Only validate credentials on create based on resources
+* Run cfg.CONF.reset() on test cleanup
+* Fix H233 in sphinx config
+* Fix TemplateResource list property conversion
+
+2013.2.b3
+---------
+
+* parallelize StackResource delete
+* Adding IPsec site connection to Heat resources
+* Adding IPsec policy to Heat resources
+* Adding IKE policy to Heat resources
+* Adding VPN Service to Heat resources
+* update neutronclient to 2.3.0 minimum version
+* parallelize instance delete
+* parallelize volume deletion
+* Implement parallel delete
+* Fix AttributeError exception in autoscaling
+* Update nested stacks in parallel
+* Fix problem with mocking tasks
+* Create a Stack.update_task() method
+* Change _testnoexisthost_ references in tests
+* Migrate stored credentials to keystone trusts
+* Remove py33 from tox.ini until eventlet is ported
+* Make error message for InvalidTemplateReference sane
+* Add unit tests for Resource dependency inference
+* Remove some heat-cfnclients only exceptions
+* Add trust_id and trustor_user_id Context and DB
+* Allowing to pass network name to router gateway
+* Don't use a query for watch_rule_get()
+* Don't use a query for stack_get()
+* Delete the old example config files
+* Remove references to the multiple config files
+* Support ISO8601 duration format for UpdatePolicy PauseTime
+* Sync rpc from oslo-incubator
+* Make security groups associated with Neutron port work
+* Parallelise Server updates
+* Rackspace: Parallelise CloudServer updates
+* Parallelise Instance updates
+* Allow resources to be updated in parallel
+* Don't stub LoadBalancer.update in autoscaling tests
+* Do updates based on a single dependency list
+* autoscaling test fix assertRaises Exception warning
+* Remove localhost references from tests
+* Implement native nova server resource
+* Generate docs using new properties Schema class
+* Give Property constraints a string representation
+* Fix CFN API error responses
+* Remove aws_creds from DB API
+* TemplateResources need to download from local "file://" urls
+* Add support for local file urls
+* Provide user control for maximum nesting depth
+* Cleanup the Properties doc strings
+* Add auto code api doc generation
+* Implement interruption-free update and rollback
+* Remove unnecessary aws_* from user_creds
+* Remove unused service_* columns from user_creds
+* Change localhost references in test_nested_stack
+* Add schema for security group rule
+* Don't delete failed instances in InstanceGroup
+* Add VPCZoneIdentifier attribute for autoscaling
+* Make logical_resource_id renaming backward compatible
+* Add the missing heat.po files into heat
+* Add the api config opts in groups to deal with the single heat.conf
+* Rename OS::Metering::Alarm to OS::Ceilometer::Alarm
+* Catch a NotFound exception in signal_responder delete
+* Improve error message for nova unknown status
+* Remove backup resources on stack delete
+* Add a DB API to swap two resources between stacks
+* Add a "rollback" parameter to StackUpdate
+* Always resolve properties against the current stack
+* Remove the rest references to exception.py
+* Support native naming in InstanceGroup
+* Include Description in conversion from legacy Property schema
+* Add support for source security groups
+* Adds support for Neutron Firewall
+* Autoload Nova extensions
+* Allow in-place update of nested stack
+* Enhance StackResource update for more use cases
+* Store the backup stack during updates
+* Pass owner_id to stack_get_by_name()
+* Add a method of creating a backup stack in the DB
+* Evaluate lazy translation in exception __str__
+* Allow a Provider with a known facade its own schema
+* Use the global environment to map Quantum to Neutron
+* Add a has_interface() method to the resource class
+* Only create user_creds row on initial stack store
+* remove unused config options
+* Pass token as a callable to Ceilometer client
+* Implement a load balancer resource using new neutron pool
+* Use oslo.sphinx for the doc templates
+* Rename event logical_resource_id to resource_name
+* Use string constants to prevent typo errors
+* Add a CloudWatch::Alarm implementation based on Ceilometer
+* To support both CW and CM, return alarmurl from policy ref
+* Store the generated signed urls in resource_data
+* Remove "lazy=joined" from the resource_data backref
+* Try to reduce the number of tests with the same stack_id
+* Implement Fn::MemberListToMap
+* Fix the main docs index page
+* Remove the usecases from environment.py as they are in the docs
+* Add some basic evironment docs
+* Do not delete nova server on create fail
+* Do not assume nova provides a fault on ERROR
+* Add a script show all possible state transitions
+* Limit maximum size of all templates
+* Make the API for getting dependency graph edges public
+* Pass the previous stack to StackUpdate
+* Improve update debugging messages
+* Fix all the sphinx-build warnings
+* Fix some flake8 warnings in doc/resources.py
+* Fix crash in "make html" introduced by the global env
+* EC2token middleware implement multi-cloud auth
+* Replace httplib with requests for ec2tokens auth
+* Always validate auth_uri with allowed_auth_uris
+* Add UpdatePolicy attribute to Instance/AutoScalingGroup
+* Use the global environment to define AWS::CloudWatch::Alarm
+* Load deployer/global environment files at startup
+* Add an environment_format.py like the template one
+* Process request exceptions while fetching template
+* Add new attributes to EIPAssociation resource
+* Remove the Property.schema_from_param() method
+* Generate property Schema objects directly from parameters
+* Use Template to instantiate TemplateResource
+* Handling re-delete in rackspace db resource
+* Fix incorrect use of ServerError
+* Introduce nova_utils.server_to_ipaddress
+* Convert heat.common.template_format to use C yaml
+* Use system locale when Accept-Language header is not provided
+* Use LONGTEXT for templates in MySQL
+* Wrap the resource registration in a global environment
+* Create a Schema from a parameter
+* Allow Parameters to set defaults for TemplateResource
+* Fix install.sh calling setup.py
+* Allow Description in properties schema
+* Use nova_utils for keypair validation
+* Move _check_resize to nova_utils
+* Move _deferred_server_statuses to nova_utils
+* Move _delete_server to nova_utils
+* Revert "Implement an "Action in progress" error."
+* Add code from Oslo DB 96d1f887dda Part 2
+* Make Event object independent of resource object
+* Translate user-facing exception messages
+* Updated LaunchConfig for AutoScaling UpdatePolicy
+* Catch "FloatingIpPoolNotFound" in eip.py
+* Tests for s3 and swift resources were extended
+* Store owner_id on Stack so updates maintain it
+* Derive keystone_ec2_uri from auth_uri
+* Extract failure reason before deleting nova server
+* Update test requirements
+* Handle heat with SQLAlchemy >= 0.8
+* Tolerate missing user on signal responder delete
+* Fixes files with wrong bitmode
+* Fix syntax description of HOT get_attr function
+* Differentiate resource types in test_update_rollback_remove
+* Stub ResourceWithProps instead of GenericResource
+* Hot SoftwareConfig model part
+* Update Oslo to 96d1f887dda Part 1
+* Move property constraints validation to Schema
+* Remove unneccessary Property constraints from unit tests
+* Add constraint checking to Property schema
+* Tidy up a few places in test_engine_serivce.py
+* Adding HOT str_replace and get_resource functions
+* Revert "Add missing _ imports to allow doc generation"
+* Move heat-cfn, heat-boto, heat-watch to new repo
+* Add debug option to run_tests.sh
+* Introduce new resource_data_delete db api
+* Not to eat Metadata parsing error
+* Fix intermittent failure in autoscaling tests
+* Use correct actions for StackResource
+* Resolve LaunchConfig references
+* Get rid of unused greenlet things in test_resource
+* Fail fast if Resource action methods are missing
+* Don't raise ResourceFailure directly in Instance
+* ReST API: Add an API for retrieving resource schemata
+* RPC: Add an RPC call to get a resource type schema
+* RPC Client: Add missing unit tests
+* Port policy from oslo and refactor heat policy
+* Enable multi-cloud standalone mode
+* Fix problem creating ResourceFailure
+* Do validation in parameter schema
+* Validate created/updated stacks in StackResource
+* Tidy up RPC API definitions
+* Define a Schema format for properties
+* Remove meaningless property set in models.HeatBase
+* Tolerance for modified ceilometer alarm notification
+* Initial input for HOT template guide and spec
+* Remove unnecessary individual import tests.utils.X
+* Ensure all REST API error responses are consistent
+* Remove raw_template_get_all from db api
+* Provide a way to clean up soft deleted data
+* Enable stack soft delete for event persistence
+* Implement neutron pool resource
+* Implement neutron health monitor resource
+* db: Remove deprecated assert_unicode attribute
+* Refactor some tests for stack soft-delete
+* Add unittests for faultwrap middleware
+* Use openstack rpc functions to generate _Remote exceptions
+* Exclude heat-cfn, heat-watch from pep8
+* Fix H231 Python 3.x incompatible 'except x,y:'
+* Fix H501 Do not use locals() for string formatting
+* Provide a way to clean up testing database
+* Add missing _ imports to allow doc generation
+* Refactor compute resources to use nova_utils
+* Updated from global requirements
+* Implement an "Action in progress" error
+* Don't cache data from the API that could change
+* Stop copying UUIDStub, put it into tests.utils
+* HOT parameter validator part
+* Fix test cases pass dict schema directly as parameter schema object
+* Rename Quantum to Neutron
+* Add the enabled property to the ceilometer alarm
+* Refactor useful nova functions for re-use
+* Refactor InstanceGroup to use a nested stack
+* DB models and migration scripts for soft delete
+* Returns text error when instance validation fails
+* Add Babel missing requirement
+* Fix test cases pass dict as template object directly
+* Don't assign "error" variable twice
+* Change token name from context
+* Revert "Replace part_handler.py with write-files cloudinit mechanism"
+* Rename: VALUES to ALLOWED_VALUES, PATTERN to ALLOWED_PATTERN
+* Remove support for eventlet 0.9.16
+* Small tweaks to recreation of remote errors
+* Enable localizable REST API responses via the Accept-Language header
+* Include the resource and action in ResourceFailure exceptions
+* Unit tests: Don't raise ResourceFailure directly
+* unit tests: Add a handle_delete method to GenericResource
+* Rackspace: Don't raise ResourceFailure exceptions
+* Sync gettextutils from oslo
+* Resource: Clean up exception handling and error messages
+* Add help option to Config Settings
+* Rename rackspace server ImageName, Flavor, UserData
+* Call cfn-create-aws-symlinks in rackspace servers
+* Stop delete polling after status == DELETED
+* Make Volumes work with the default AvailabilityZone
+* Allow the Ceilometer Alarm to be used with cfn-push-stats
+* Add the AutoScalingGroupName to the server Tags
+* Don't use a static uuid for the stack_id in ceilometer_alarm
+* Remove password auth from pyrax
+* Move the random_name() function from loadbalancer to utils
+* Clean up the attributes module
+* Use dummy_context() for rackspace server test
+* Assign rackspace server name from physical_resource_name
+* Replace rackspace PublicKey property with key_name
+* Tolerate an actual boolean for NoEcho
+* Replace part_handler.py with write-files cloudinit mechanism
+* Rackspace database resource output is null
+* Fix for bad content inside Resources element
+* Initialize resources to DELETE-COMPLETE if missing during stack delete
+* Rackspace database resource output is null
+* Clarify text in heat/tests/templates/README
+* Use subsections in resource doc generation
+* Functions documentation cleanup
+* Print before exiting
+* Add Cloud Server support for RHEL and CentOS
+* Support any distribution without UserData/MetaData
+* Allow template resource use outside of Environment
+* Add rest endpoints for resource template generation
+* Add a Ceilometer alarm resource
+* Fix a timing sensive cloudwatch testcase
+* Auto-document all resource types
+* Sphinx extension to generate resource documentation
+* Enable service validate-template for hot template
+* Skip RSA generation during tests
+* Always convert AllowedValues to a list
+* Add some docs for intrinsic functions
+* Fix cloud_watch delete when the watchrule is not found
+* Teach ScalingPolicy and Restarter to create signed urls
+* Make the current alarms use the signal action
+* Add an API for passing a signal through to a resource
+* Generate a template from a resource implementation
+* remove remote_error and corresponding try...catches
+* Replace urllib2 with requests in urlfetch module
+* HOT parameter validation model translation
+* make heat-api return a parsable error
+* Fix loguserdata output to file issue
+* Use new style classes
+* Add resource for Rackspace Cloud Servers
+* api : Implement OnFailure option to cfn API CreateStack call
+* Add `default` attribute in hot parameter definition
+* Refactor the code in heat/tests/test_volume.py
+* Handle 'detaching' state of Volume
+* Reset state before resource recreation
+* Only use a token for openstack client operations
+* Migrate all tests to use dummy_context
+* Add missing Aapche 2.0 license headers (H102)
+* Add a py33 tox environment
+* Reset the the watch_rule.last_evaluated on start up
+* Only create the period watch task if there is a watch in the stack
+* Wrap the watch rule start in a method
+* Configure standalone pipelines for cfn and cloudwatch
+* Set role headers from ec2 authentication
+* Set tenant headers from ec2 authentication
+* Update openstack.common.config
+* Handle InstanceType change in Instance.handle_update
+* Move url_for into heat_keystoneclient
+* Test utils dummy_context for tests that need one
+* Put pre-created resources in state INIT COMPLETE
+* add docs from the heat wiki
+
+2013.2.b2
+---------
+
+* Add a test for customizing AWS::EC2::Instance
+* Add tests for resource-data delete bug
+* Fix resource-data delete bug
+* Fix version and location of heat doc build
+* Check missing parameters during stack create
+* Don't reload haproxy and use ensureRunning=true
+* Make sure that Tags on the InstanceGroup get passed to nova
+* Test that Tags get converted into nova metadata
+* Align OpenStack client versions with project requirements
+* Cleanup and make HACKING.rst DRYer
+* engine : Allow loadbalancer resource to work with no key
+* Create implicit depends from gateway to public subnet
+* Wait until quantum resources are deleted
+* Do not override FnGetAtt
+* Add resource_data table for free-form key/value data
+* provide test for nested stack error path
+* Add Rackspace cloud loadbalancer resource
+* Update oslo.notifier and always register options
+* avoid excessive database calls while loading events
+* Global disable scheduler _sleep instead of mocking
+* Rename part-handler.py to part_handler.py so it can be imported
+* Handle conversion of MAP properties to JSON params
+* Tolerate an empty environment properties
+* Add length validation to properties of type LIST and MAP
+* Use new environment and parameters on stack update
+* Define behaviour for properties with None values
+* Let git ignore pydev project description files
+* Suggest the use of tripelO images
+* Make the waitcondition signed url more generic
+* Check duplicate names between params and resources
+* engine : add suspend/resume support to User resource
+* engine : add suspend/resume support to watch resource
+* Sync install_venv_common from oslo
+* Stop patching the GenericResource's property_schema
+* Enforce credentials requirement on stack create/update
+* cleanup watchrule delete logic/tests
+* Fix command name display issue in heat-manage usage
+* engine : autoscaling pass instance id's not names to loadbalancer
+* Rackspace cloud database resource provider
+* add missing gettextutils imports
+* engine : perform periodic tasks with stored stack_context
+* implement stack metadata
+* Rework associations from vpc to quantum resources
+* Tolerate 404 on user delete
+* Get rid of template caching in resources
+* Explicitly pass old json snippet to update
+* tests : remove duplicate suspend tests
+* Add resume support to InstanceGroup
+* engine : resume support for nested stacks
+* api : Add actions resume support
+* Add resume support to Instance
+* Add initial resume logic to engine
+* destroy failed instances created by auto scaling
+* Expose resource dependency required_by to REST API
+* install "_" via gettextutils
+* engine : simplify resource state check
+* engine : remove unnecessary default check_*_complete functions
+* Fixup handle_create backup restore
+* Remove comments from requirements.txt (workaround pbr bug)
+* add GET /{tenant_id}/stacks/detail to Heat API
+* Add suspend support to InstanceGroup
+* Fixup assert_has_keys
+* autoscaling : Fix issue when scaling to zero instances
+* Add editor backup files to .gitignore
+* Ports depend on the subnets in the same network
+* Add dependency between RouterGateway and RouterInterface
+* Add MinLength, MaxLength to properties schema
+* engine : autoscaling refactor Instance list->object logic
+* api : Add ReST actions POST method
+* engine : parser.Stack create general stack_task
+* engine : suspend support for nested stacks
+* Add suspend support to Instance
+* engine : stack_resource change state_description to status_reason
+* Raise suitable exception when stack validation fails
+* Handle YAML parser error as well
+* Changes for HOT hello world template processing
+* OS::Quantum::Subnet resource, add enable_dhcp
+* check content type in JSONRequestDeserializer
+* Store created nova client in OpenStackClients
+* Allow JSON values for parameters
+* Add initial suspend logic to engine
+* Use print_function compatible syntax
+* Allow a resource delete to be re-attempted
+* Emit alarm actions if a rule remains in ALARM state
+* Initial provider templates
+* Fixup some trivial license header mismatches
+* Adding common base class for Rackspace Resource providers
+* Pass before and after snippets to template diff
+* Cache snippets in StackUpdate
+* Simplify a stack update unit test
+* Refactor and partly parallelise stack update code
+* make stack creation return json response
+* Give alarm a physical_resource_name which need no id
+* Do not refresh timestamp from database on read
+* Unrestricted username length causing error
+* Add VerifyAll to test methods using mox
+* Fix BaseException.message DeprecationWarning
+* Fix one of the last stack.state's -> status
+* Revert "check content type in JSONRequestDeserializer"
+* Fix and enable H303 and F403 No wildcard (*) import
+* Implement attribute schema for resources
+* Introduce a schema for attributes
+* Restore babel setup config options
+* Convert Stack to separate action/status
+* Updated common module from oslo
+* Initial provider template uploading
+* check content type in JSONRequestDeserializer
+* Detect failed instance creation in autoscaling
+* Support cloud-specific suffixes to server status
+* autoscaling fix LoadBalancer reload static resolve
+* Return None for physical resource name during validation
+* Standardise resource names in Invalid Attribute errors
+* suppress and log API internal exceptions
+* Add a Fn::Split function to aid provider templates
+* Add dependency between FloatingIP and RouterGateway
+* Add InstanceId property to EIP resource
+* scheduler: Simplify DependencyTaskGroup interface
+* scheduler: Improve task descriptions in debug logs
+* Cleanup the doc strings in heat/rpc/client.py
+* API support for Environments
+* Make template_format.parse usable by environments
+* Use PhysName for testing Swift container names
+* Fix bizarre Swift DeletionPolicy unit tests
+* Use physical_resource_name() for Swift containers
+* Remove unused parameter.user_parameters()
+* Use the Environment from within the engine
+* Use physical resource names with a short_id
+* Initial Environment class and test
+* engine : abstract state-transition logic
+* Convert Resource to separate action/status
+* Store stacks in the database when running unit tests
+* Unit tests: Create User for testing AccessKey
+* Unit tests: Don't use mox to stub uuid.uuid4()
+* Make resource ids UUIDs in the database
+* Convert Events to separate action/status
+* allow using image uuid for instance resource
+* fix an CFN API and AWS error mapping
+* Remove unused python-memcached from requirements
+* Use Python 3.x compatible except construct
+* Add bin/heat-manage to flake8 checks
+* Gate on H703
+* scheduler: Fix an issue with wrappertasks and exceptions
+* Fix H702 errors and enable them
+* Remove explicit distribute depend
+* Key error when auth in standalone mode
+* engine : remove GreenletExit workaround
+* Add descriptions of the pep8 checks
+* Fix various Sphinx errors/warnings
+* Use Python 3.x compatible octal literals
+* Adds possible topdir to python search path
+* Return empty string when Fn::Select target is None
+* Add Fn::Replace template function
+* Initial mariadb support
+* raise an UnknownUserParameter exception when receiving an unknown param
+* Enable H403
+* get rid of no-op __init__ methods
+* Rename functions which should not be run as tests
+* flake8 F812 list comprehension redefines fix
+* Only call FnGetAtt if resource is in acceptable state
+* Make Fn::GetAtt add a dependency
+* Use - instead of . for physical_resource_name delim
+* Make autoscale not dependent on loadbalancer impl
+* Use a physical name matching class in unit tests
+* Add Fn::Select template function
+* Fix instance creation when a network with no subnet is used
+* For Fn::Join, replace None items with an empty string
+* Relax lxml version requirements
+* tests : fix cut/paste test name shadowing
+* a minor fix to volume.py
+* Fix Hacking H304 Warnings
+* Fix an intermitting failure in test_metadata_refresh
+* Log at DEBUG level in unit tests
+* scheduler: Fix inifinite loop for no-wait tasks
+* Handle metadata updates during stack creation
+* Create nested stacks in parallel
+* Create stacks with a co-routine
+* Implement timeouts for nested stacks
+* Allow stacks to be created without a timeout
+* add error flow tests for volume detach
+* Clarify a comment which says we require KeyName - which is incorrect
+* Add CONTRIBUTING.rst file
+* Clean up DB migrations when running unit tests
+
+2013.2.b1
+---------
+
+* Get rid of extra delays in unit tests
+* Restore heat.db.sync and add Deprecated message
+* Use heat-engine.conf for heat-manage config
+* Create resources in parallel where possible
+* Add a dependency-aware task group
+* Move deletion from dependency graph to __delitem__
+* Make the mutable dependency graph a separate class
+* Make dependency graph node class public
+* Fix the handling of non-existing paste file
+* refactor test_engine_service.py
+* Fail validation when security groups and interfaces conflict
+* Add a basic heat-manage
+* Remove eventlet dependency from unit tests
+* Use a task to delete Instances
+* Bring in oslo.cliutils for heat-manage
+* Update the oslo code before importing a new module
+* Migrate test base class to testtools
+* Add CONTRIBUTING file
+* Migrate to pbr
+* Implement SecurityGroupIds property for instances
+* Use UUIDs for Quantum security groups
+* Make IDs for resources unique to ensure tests pass
+* Change SecurityGroups to be passed directly to nova
+* Add a separate Template class for the HOT format
+* Detach Volumes from an Instance in parallel
+* Handle instance volume attachments with co-routines
+* Add a convenience method to get instance volumes
+* engine : move update_template_diff functions into Resource
+* Instance resource remove unreachable/redundant Metadata update check
+* heat tests : add coverage for instance UpdateReplace
+* engine : replace UPDATE_REPLACE with ResourceReplace exception
+* Move VolumeAttachment polling to check_create_complete()
+* Make volume detachment a co-routine
+* Make volume attachment a co-routine
+* Verify function calls in cinder_fn_getatt unit test
+* Stub out sleeps in quantum unit tests
+* Remove unrelated tracebacks from test output
+* Rename requires files to standard names
+* engine : Fix ResourceFailure exception issues
+* Fix PEP H101 (Use TODO(NAME))
+* update on_devstack doc
+* Implement OS::Cinder::VolumeAttachment
+* Fix PEP H902 (Use the 'not in' operator)
+* UpdateStack for AWS::AutoScaling::ScalingPolicy
+* Fix PEP H301 (one import per line)
+* Fix PEP H402 "one line docstring needs punctuation."
+* PEP: be explicit about what errors are ignored
+* engine : remove unused update states/status
+* engine : cleanup Resource.update error paths
+* Adds sudo check for privileged operations
+* The oslo module called utils is no more
+* Exclude build/ from flake8 checks
+* Tests for Router, RouterInterface, RouterGateway
+* Tolerate resource lookup errors for quantum FnGetAtt
+* Implement check_active for quantum net, port, router
+* The utils module in oslo is no more
+* Migrate to flake8
+* Clean up a pyflakes error in a comment
+* Align usage of test skipping
+* Fix error in Dependencies representation
+* Fix SecurityGroups for AWS::AutoScaling::LaunchConfiguration
+* Initialise resources when service is created
+* Use mox for mocking quantum client test calls
+* Cleaned up some simple hacking/pyflakes errors
+* Clean up import of cinderclient exceptions
+* Make Volume snapshot a task
+* Move Volume polling to check_create_complete()
+* Handle errors in Volume creation
+* Rename handle_snapshot and pass state
+* use skipIf for all quantum test skip checks
+* Clean up VPC unit tests
+* Adds dns_nameserver to OS::Quantum::Subnet
+* Use python logging for loguserdata.py, log to console
+* Implement CinderVolume.FnGetAtt
+* Implement OS::Cinder::Volume
+* Copy the RHEL6 eventlet workaround from Oslo
+* Update install_venv_common from oslo-incubator
+* Use hostname from env in heat-keystone-setup
+* Move WaitCondition polling to check_create_complete()
+* Add a timeout option to the scheduler
+* engine : rename check_active to make it more generic
+* api : Fix template-show partial URL redirect
+* Provide example config option for instance_user
+* Add new exception for invalid template ref
+* Implement the SubnetId property in the Instance resource
+* heat-cfn : Make error with missing auth details more obvious
+* Fix GroupSet assignment to use resource id instead of name
+* Fix unit test coverage issues for wrappertask
+* Explicitely register options to fix intermittent failure
+* Skip more tests that require Cinder backups
+* templates : remove in-tree templates
+* tests : convert test_template_format to test-local templates
+* tests : convert most remaining tests to inline templates
+* Fix skips done in the test suite by using testtools skipIf
+* Wait for any nova server status that makes sense
+* Add test to handle nova BUILD status on create
+* tools : remove fetch-cloudformation-examples
+* docs : update local template references to heat-templates url
+* tests : utils parse stack specify tenant in context
+* tests : utils parse_stack allow stack_id override
+* Use scheduler for driving autoscaling task
+* Use a PollingTaskGroup to simplify autoscaling
+* Add a wrappertask decorator
+* Add a PollingTaskGroup task
+* Deprecate tools/nova_create_flavors.sh
+* Support password authentication
+* Support SnapshotId in volume creation
+* Give each cli its own test
+* heat tests : separate Autoscaling and CW alarm tests
+* heat tests : convert most tests to inline templates
+* heat tests : add parse_stack function to test utils
+* Fix error reporting in @stack_delete_after unit tests
+* Set Stack id to None when deleted
+* Support Snapshot policy in volumes
+* Allow non-replacement updates of Alarms
+* Sometimes use quantum for SecurityGroup
+* Depend on discover to fix python2.6 tests
+* heat api: ec2token remove unnecessary jsonutils retry
+* Make DeletionPolicy a resource attribute instead of a property
+* Use install_venv_common from oslo
+* Split the module lines in openstack-common.conf
+* Refactor instance tests to share common code
+* Fix test_validate to run by itself
+* Fix test_dbinstance not running by itself
+* heat tests : run_tests.sh reinstate text coverage report
+* Remove all references to nose
+* heat api : Update ec2token middleware for v4 signatures
+* Remove unused jenkins arguments from tox.ini
+* Enhance testcase for failed resource deletion
+* Retrieve the list of availability zones from nova in Fn::GetAZs
+* Fix "No handlers could be found" warnings
+* Fix warning about using os.tempnam in test suite
+* Remove unused skip_unless and skip_test decorators
+* Remove unused and outdated heat/testing dir
+* Re-work run_tests.sh to call testr instead of nose
+* Remove broken --doctest call from run_pep8.sh
+* Remove use of nose attrib plugin and most unittest
+* Removing all prints and capturing logging
+* Remove functional tests in preferece for tempest
+* Remove examples and update testing-overview.txt
+* Use testr for running gate tests
+* Enable running tests via testr
+* Make Resource.create() a co-routine
+* heat docs: deprecate old GettingStarted guide
+* heat docs : Update jeos building documentation
+* heat api: fix ec2token authentication
+* Remove pyflakes_bypass
+* Fix DB sync script
+* Update tools/integration.sh script to new docs tree
+* Validate properties against the schema in validate_template
+* heat engine : register options before using them
+* Add a scheduler module
+* Remove engine_topic configuration option
+* Send RPCs to 'engine' topic not 'engine.$host'
+* Do not initialize anything during import phase
+* Consolidated api-paste.ini file
+* Move ec2token defaults from paste.ini to .conf
+* Optionally allow ec2token config to come from .conf
+* Propagate deletion errors with exceptions
+* Mock delete_network in Quantum unit tests
+* Mark resources as failed when creation aborted
+* Propagate creation errors with exceptions
+* Assert on Resource double-create()
+* Fix issues with EIP unit test
+* Get rid of create state in Instance
+* Remove service _user, _password, _tenant from context
+* Move heat-api auth_token conf from paste.ini
+* Subclass keystone middleware to set headers
+* Improve Python 3.x compatibility
+* Fix pyflakes-bypass for PyFlakes 0.7
+* Simplify rpc client calls
+* Fix the exception message in stack_resource.get_output()
+* Updated OpenShift template
+* heat-cfn: Handle parameters with = in them
+* uses os.urandom instead of Crypto.Random for backward compatibility
+* Update the README to point to docs.openstack.org/developer/heat
+* Clean up metadata refresh unit test
+* Get rid of create state in Autoscaling
+* Pass data from handle_create() to check_active()
+* heat templates : Update Wordpress config for F18 guests
+* heat : Getting started updates for grizzly
+* heat : cloudwatch paste.ini credentials incorrect
+* heat tools : openstack script fixes for grizzly
+* Update to the latest loopingcall from oslo
+* Remove paste config for non-existant cache filters
+* Remove unused and deprecated auth-context filter
+* Attempt to delete resources even if they failed
+* Fix AccessKey deletion with bad credentials
+* Delete unused ContextMiddleware
+* Replace deprecated commands with current equivalents
+* Fix sphinx warnings
+* ReST API: Translate the documentation to WADL
+* Add Getting Started Guides the developer doc's
+* No longer pass no_cache=True to novaclient create
+* Log tracepath for stack validate exceptions
+* Pass in endpoint url for quantum auth_token auth
+* Allow nova operations with only auth_token
+* Pass in endpoint url for swift auth_token auth
+* Allow cinder operations with only auth_token
+* Catch NotFound exceptions on Volume handle_delete
+* heat engine : Autoscaling reload Loadbalancer correctly
+* Don't assume a Parameter value is a str
+* Make swift FnGetAtt fault tolerant and block less
+* heat : remove fallback ec2signer implementation
+* Fix swift client token authentication
+* validate_template returns whole Parameters snippet
+* heat getting started : fix heat-jeos URL
+* Change executable file permission for rpmlint
+* Change executable file permissions for rpmlint
+* Tolerate missing keys in reformat_dict_keys
+* Get rid of versioninfo cruft
+* Bump Heat version to 2013.2
+
+2013.1.rc1
+----------
+
+* Create a wsgi factory method for Debug filter
+* If a stack create fails, ensure the stack is deleteable
+* Add a manual page for heat-db-setup
+* Add heat-keystone-setup man page
+* Sort the manual page list in conf.py
+* Allow per-deployment configuration of user id
+* Remove ssh from cloud-config-files
+* loguserdata: handle exceptions from running the userdata
+* loguserdata: prevent shadowing of arguments and globals
+* part-handler: add missing import
+* heat engine : fix exception syntax issue
+* heat docs : Add manpage for heat-boto
+* Remove Nova dependencies from hacking test
+* heat docs : Add 2013 to the copyright string
+* heat docs : Add heat-watch manpage
+* Update dependency versions to match oslo-incubator
+* Fix security groups (need to be accessed as attributes)
+* Remove todolist from docs index
+* Only split roles if they are not None
+* Revert NestedStack FnGetRefId changes
+* Switch to final 1.1.0 oslo.config release
+* heat templates : Update for F18
+* heat engine : Add validation of stack names
+* Pin SQLAlchemy to 0.7.x
+* Squash Grizzly database migrations
+* Use internal DB management
+* Register DB options independently of engine
+* Avoid manipulating DB directly in unit test
+* Establish an initial version of the database
+* Set correct type for owner_id in DB model
+* heat clients : Fix --timeout option for heat-boto
+* Skip quantum unit tests if client not installed
+* Delay calling _get_user() until AccessKey is created
+* Recognise arn: for REST stack lookup
+* Update to Quantum Client 2.2.0
+* heat engine : store stack on failed update
+* Add Quantum floating ip assoc tests to improve coverage
+* Add Quantum port tests to improve coverage
+* Add Quantum floating ip tests to improve coverage
+* Add tests to validate REST path to action mapping
+* Use stack.resource_by_refid to get the user resource
+* Use quantum IDs for VPC, Subnet, RouteTable resources
+* heat common : quieten policy logging
+* heat common : policy.py change LOG to logger
+* heat common : BaseClient respect host argument
+* heat clients : make --host option error for heat-boto
+* heat tests : Improve resource.py test coverage
+* heat engine : allow Properties validation failure events
+* heat tests : move GenericResource into tests directory
+* Convenience method to look up resource by FnGetRefId
+* fakes: remove some duplicate methods
+* Switch to oslo.config
+* Allow REST stack lookup by ARN
+* heat engine : watchrule quietly discard unused metric data
+* Use built-in exception filtering for GreenletExit
+* heat engine : Loadbalancer template watch reference should be Ref
+* make parsed template snapshots before updating
+* heat engine : Ensure properties validation is caught
+* Allow instance NetworkInterfaces to be list of str or dict
+* Test coverage for NestedStack, and fix FnGetRefId
+* When updating the metadata load the stack with the stored context
+* add missing licence header
+* Stop heat services from logging to stderr by default
+* Make sure we have a volumes property before trying to use it
+* Prevent shadowing of the "context" module/parameter
+* Fail validation when an unknown property is supplied in a template
+* Validation failures now raise StackValidationFailed
+* vpc_test: move DependsOn to the correct template section
+* heat clients : Make heat-boto rollback disabled by default
+* heat clients : Change --disable-rollback to --enable-rollback
+* heat engine : Disable stack rollback by default
+* Add N802 rule to hacking.py
+* Add pyflakes to test-requires
+* Remove unused import from test_nokey.py
+* Create autoscaling instances in parallel
+* Separate public/private autoscaling adjust() APIs
+* Move instance polling into check_active()
+* Use oslo logging setup
+* Split resource create into create and check_active
+* Fix unit tests for Instance IP
+* Fix flaky unit test
+* Fix Unrecognized Attribute admin_state_up Error
+* Add breaks to for loops
+* Remove unused import from loguserdata.py
+* Allow heat to be used without a KeyName set
+* Do a metadata refresh after an explicit metadata write
+* Gate on certain pyflakes failures
+* Remove unused imports from repo in preperation for pyflakes
+* Add heat-watch to pep8 checks
+* Update infrastructure to more closely match other OpenStack projects
+* heat engine : fix hardcoded DisableRollback value
+* heat clients : make boto client library pass disable_rollback
+* heat tools : openstack script install mysql via openstack-db
+* Put heat data files in /var/lib/heat-cfntools
+* Depend on recently released python-quantumclient 2.1.2 Fixes bug 1133381
+* Remove duplicate Mapper() constructor
+* heat engine : loadbalancer resource template, refer to StackId
+* heat engine : Re-resolve resource static data before create
+* heat engine : Compare runtime resolved resource snippets on update
+* heat engine : Set stack parameters AWS::StackId on stack create/store
+* heat engine : Add parser parameter support for AWS::StackId
+* Removes unused config settings from heat-engine.conf
+* heat engine : Make loadbalancer nested template raw string
+* Add waitcondition to loadbalancer nested template
+* heat engine : fix variable/import shadowing in service.py
+* heat engine : reinstate resources import
+* Update the metadata if an alarm action makes changes
+* Make the alarm actions run in one thread
+* heat : Only set qpid loglevel when rpc_backend specifies qpid
+* Use a short_id for naming S3 containers
+* Use a short_id for naming Swift containers
+* Add a module for generating random short ID strings
+* Make the exception string a little more useful
+* Remove compat cfg wrapper
+* Make quantumclient optional again
+* Get rid of unused imports
+* heat loadbalancer : make LB nested template create credentials
+* Protect AccessKey deletion from failing
+* Fix tarball tag to be empty rather than a point
+* Do not tag development releases "dev"
+* heat api : allow validation of YAML templates via cfn api
+* heat api : don't store whole request in ec2Credentials context
+* heat tests : fix run_tests.sh pep checks
+* heat : bump oslo-config version to fix import error
+* Add an attribute to InstanceGroup and AutoScalingGroup to return the ips
+* Remove "deny from all" line in wordpress config
+* Update GettingStarted with link to prebuilt images
+* heat engine : Add support rollback support for stack updates
+* heat engine : Update stack dependencies during update
+* heat engine : fail update immediately on resource update failure
+* heat common : Add ResourceUpdateFailed exception type
+* Add config for boto https_validate_certificates
+* heat engine : avoid returning empty resource error strings
+* Missing policy json files from tarball
+* heat engine : Implement rollback for stack create
+* heat engine : Only create periodic task on CREATE_COMPLETE
+* make stack_delete_after decorator tolerate deleted stacks
+* Use 2013.1 for Grizzly release version info in setup.py
+* Provide unit test coverage for AWS::EC2::SecurityGroup
+* heat cli : Add --disable-rollback option to heat-cfn
+* heat tests : delete stacks from DB in parser tests
+* heat api : Handle DisableRollback parameter in cfn API
+* make engine api handle string or bool disable_rollback
+* Throw a proper error if the flavor is missing
+* Add information about using the python-heatclient to the documentation
+* Make AvailabilityZone parameter available to nova create
+* Use oslo-config-2013.1b3
+* heat engine : Add support for disable_rollback to engine API
+* Implement RouteTable and subnet association
+* Implement Internet Gateway and VPC attachment
+* Escape awk + sign so heat-keystone-setup works on Ubuntu 12.04
+* Complete tests for NetworkInterface
+* Fix policy checks for users without policies
+* Use physical_resource_name for quantum/vpc resources
+* ip_version is mandatory for quantum create_subnet
+* Implement VPC Network Interface resource
+* Add Tags to vpc properties schema (Unimplemented)
+* Impement VPC subnet resource
+* heat templates : allow access to wordpress in example templates
+* Implement the "Volumes" property of Instances
+* Make the doc look a bit better and give a better overview
+* Add update support to InstanceGroup
+* Implement NetworkInterfaces instance property
+* Catch 404s when deleting quantum resources
+* Implement simple AccessPolicy Resource
+* heat templates : Remove IAM Policy sections
+* heat tests : split user test into User/AccessKey
+* heat engine : add option to control instance boto http/https
+* heat clients : Make boto client select http/https from configfile
+* heat scripts : Avoid using lsb_release in tools/openstack
+* heat api : Add policy.json authorization to cloudwatch API
+* Depend on WebOb==1.2.3 to align with other OS projects
+* Use yaml.safe_load: full yaml.load isn't needed
+* Add missing logging import
+* test_s3: use try_import from common
+* Refactor loguserdata.py so it can be tested
+* heat api : Add policy.json authorization to CFN API
+* heat common : context should split roles from X-Roles
+* heat tests : fix StackControllerTest name duplication
+* heat tests : remove duplicate import
+* Add cinder support to resource volume
+* Add initial code to support policy.json implementation
+* update openstack common and include policy.py
+* Remove unused heat/common/policy.py
+* Fix a few bash logic errors in install script
+* Remove sendfile as a dependency
+* Fix typo in AutoScaling update
+* Change install scripts to use cinder
+* heat engine : AutoScalingGroup UpdateStack support
+* heat engine : Resource add function to compare properties
+* heat tests : update_allowed_keys should be tuple
+* heat engine : Resource remove redundant None get defaults
+* heat docs : Fix version string issue
+* Update to latest oslo-version code
+* heat engine : WaitCondition add Handle property validation
+* heat tests : test_api_cfn_v1 move verify out of teardown
+* heat tests : test_waitcondition move cleanup out of teardown
+* heat tests : Add utility decorator for deleting stacks
+* heat api : add register_api_opts to init.py
+* heat engine : WaitConditionHandle use creation time for timestamp
+* heat engine : don't treat UPDATE_COMPLETE as failure
+* heat engine : pass fully resolved template to update
+* heat engine : Support Metadata update for Instance resource
+* heat engine : add Resource update_template_diff method
+* heat engine : pass json snippet into resource handle_update
+* heat engine : don't replace resource template before update
+* Hardcode provision-finished file path
+* Wait for deletion of Instances during creation
+* Fix Instance deletion in unit tests
+* Initial support for Transifex translations
+* heat engine : error on resource update with invalid properties
+* Store instance resource-id earlier
+* Make sure failures in groups (autoscaling & static) are raised
+* heat engine : AutoScalingGroup implement Cooldown property
+* Make flavor-list regexp more robust
+* Make a dedicated InstanceGroup
+* heat engine : ScalingPolicy implement Cooldown property
+* heat tests : autoscaling test add missing VerifyAll
+* heat tests : WatchRule test add missing VerifyAll
+* Use pkg_resources to detect version of cloud-init
+* A native Swift container resource type
+* heat_keystoneclient make token auth work
+* heat api paste.ini auth_uri should use auth_port
+* heat rename HEAT::HA::Restarter resource
+* heat engine : make WatchRule state message info
+* heat engine : make WatchRule initial state NODATA
+* heat tests : test_watch add tests for set_watch_state
+* heat tests : test_watch add create_watch_data test
+* heat engine : make watchrule actions run in stack ThreadGroup
+* heat tests : Add WatchRule evaluate test
+* heat engine : watchrule save state when actions undefined
+* ReST API: Don't overwrite webob error messages
+* heat tests : test_watch remove logging
+* ReST API: Return 400 for malformed JSON input
+* Typo error, "requied" -> "required" in run_tests.sh
+* openstack/common : rebase to latest oslo
+* heat tests : test_engine_service remove commented lines
+* heat engine : watchrule don't run rule for every SampleCount
+* heat templates : IHA enable cfn-hup
+* heat templates : fix IHA HeartbeatFailureAlarm during instance build
+* heat templates : IHA HeartbeatFailureAlarm should be Ref
+* heat templates : add missing credentials to IHA template
+* ReST API: Clean up exception-handling cruft
+* RPC API: Add a WatchRuleNotFound exception
+* RPC API: Add a PhysicalResourceNotFound exception
+* RPC API: Add a ResourceNotAvailable exception
+* RPC API: Add a ResourceNotFound exception
+* RPC API: Add a StackExists exception
+* RPC API: Add a StackNotFound exception
+* RPC API: Add an InvalidTenant exception
+* Prepare the groundwork for more exception types
+* Fix duplicate naming in unit tests
+* Get rid of unused initialisations in Resource
+* heat tests : remove debug print
+* Don't inherit from NestedStack
+* Move abstract nested stack class to separate file
+* Add a convenience method for deleting nested stacks
+* Only delete the flavors that the script will then replace
+* Make pip-requires a little F18 friendlier
+* Remove instance in ERROR state after failed create
+* Remove extras dependency with a partial oslo sync
+* heat engine : WaitCondition FnGetAtt return correct signal data
+* heat engine : Implement Count property for WaitCondition
+* heat engine : Add metadata validation to WaitConditionHandle
+* heat engine : implement metadata_update per-resource
+* Add auth middleware for custom cloud backend
+* Add configurable cloud backend
+* Trivial commit to make daily rpm builds work again
+
+grizzly-2
+---------
+
+* heat engine : DBInstance don't pass credentials to cfn-init
+* heat engine : LoadBalancer resource delete nested stack
+* heat engine : DBInstance fix so nested stack is deleted
+* heat engine : allow NestedStack template validation to work
+* heat engine : ensure create thread exits on stack delete
+* Handle different cloud-init versions gracefully
+* Add missing files to generated tarballs
+* heat tests : remove unused get_sftp_client()
+* heat tests : remove pointless get_ssh_client
+* heat engine : map DBInstance DBSecurityGroups parameter correctly
+* heat tests : functional tests align eip output with Folsom
+* Turn off tag_date on branch master
+* heat tests : CFN_API functional tests NoEcho Parameters fix
+* heat tests : functional tests remove erroneous finally clause
+* heat tests : convert stack ID to uuid format
+* heat tests : functional tests poll_glance cleanup
+* heat tests : convert functional tests to folsom glanceclient
+* Use correct stack_id arg name for metadata_update()
+* On master branch, tag tarballs as dev snapshots
+* RPC API: Simplify describe_stack_resources call
+* Use the new find_physical_resource RPC call
+* RPC API: Add a separate find_physical_resource call
+* CFN API: Fix DescribeStackResources with physical ID
+* Handle duplicate physical resources IDs
+* RPC API: Clean up list_events results
+* RPC API: Clean up list_stacks results
+* RPC API: Clean up show_stack results
+* Include new doc directory
+* run_tests.sh fixup venv/novenv logic
+* run_tests.sh cosmetic, make if/then style consistent
+* run_tests.sh cosmetic cleanup indents
+* update tox.ini to pep8 latest (1.3.4)
+* heat cleanups to align unit tests with pep8 1.3.4
+* heat cleanups to align functional tests with pep8 1.3.4
+* heat cleanups to align with pep8 1.3.4
+* Fix DescribeStacks command for all stacks
+* ReST API: Improve format of resource_types response
+* Return an ARN as the Ref for nested stacks
+* Split nested stack implementation into abstract and concrete
+* Avoid logging.getChild for python2.6 compatibility
+* RPC API: Pass a stack identifier to metadata_update
+* Pass correct types in RPC Client unit tests
+* Update links in composed templates
+* A new documention structure, ready for contributions
+* pip-requires PyCrypto should be >= 2.1.0
+* Add support for missing Instance attributes PrivateIp and PublicDnsName
+* GettingStarted: Install python-pip package
+* Fix issues with deleting a WaitCondition
+* Fix importing of novaclient exceptions
+* tools/openstack_ubuntu fix nova-manage network create command
+* Handle empty UserData for instance
+* Make resource registration conditional
+* Add a resource type list to the ReST API
+* Add an RPC API to list resource types
+* Standardise client imports
+* Fix ReST API documentation for template validation
+* install.sh non-root error should go to stderr
+* install.sh add logic detecting rabbitmq
+* tools/openstack fixup header formatting
+* Add ubuntu version of tools/openstack
+* install.sh simplify heat-engine.conf conditional
+* Remove heat-metadata man page
+* Get rid of naked "except:" clauses in tests
+* Don't skip watchrule test on exception
+* Get rid of unused imports
+* Get rid of nose.main() in unit test files
+* heat_keystoneclient ec2 user fix
+* Move the cfn client code to a subpackage
+* heat cfn api, format waitcondition error responses correctly
+* Override events for AutoScalingGroup instances
+* resource state_set, abstract update/store logic
+* Don't allow identifiers with slashes
+* Don't allow slashes in Stack or Resource names
+* Move resolved template comparison to stack update
+* Fix race condition in list_stacks
+* Get rid of glanceclient dependency
+* heat engine : convert WaitConditionHandle URL to ARN format
+* heat : Add HeatIdentifier from_url function
+* Eventlet monkey-patch heat-api-cloudwatch
+* Eventlet monkey-patch heat-api-cfn
+* Eventlet monkey-patch heat-api
+* Add test to simply run a few binaries
+* Switch over missed file in version switch
+* Don't pass -1 as a stack_id in unit tests
+* Make Volume tests independent
+* Clean up the volume test
+* Fix Instance unit tests
+* Add back catch_error which is used for CLI errors
+* Switch to openstack style versioning
+* Update openstack-common to get newly fixed version.py
+* heat-db-setup read engine config file for DB connection details
+* Don't get nested stacks by name
+* Fix exception handling in AccessKey fetching
+* Move utils.py to a more appropriate location
+* Get rid of leftover heat-jeos code in utils
+* Get rid of pointless cloudformation.py file
+* Get rid of the cfn_helper tests
+* Enable VPC unit tests
+* Enable Quantum unit tests
+* Get rid of naked except: clauses
+* heat : Update getting started wiki links
+* heat : Clarify openstack versions for Fedora releases
+* heat : Update repositiory in getting started guide
+* Add version.py from openstack-common
+* Do not wrap exceptions during quantum resource delete
+* Update openstack-common
+* Use common implementation for fetching templates
+* Add a common implementation for fetching a URL
+* Pass string to template_format.parse()
+* Resource.__eq__ allow resources in different stacks
+* Fix importing of quantum resources subpackage
+* Do the same install_requires as other projects
+* Install extras during pip install; fixes devstack
+* heat remove unused config options
+* heat getting started, add pip install extras
+* heat engine : remove KeystoneClient get_user_by_name
+* heat engine : Rework AccessKey to avoid keystone user lookup
+* Make sure heat uses its own control_exchange
+* Make default encryption key long enough for unit tests
+* Update the README with more current links
+* Add VPC resource implementation
+* Update .gitreview for org move
+* Use pkgutil to load cloudinit data
+* Use module names as logger names
+* Add a plugin directory for Resources
+* Automatically register engine options
+* Move db crypto code out of the engine
+* Create a new heat.rpc package
+* Move template-format parsing code into common
+* Move the identifier module into heat.common
+* Remove gen(erate)_uuid from heat.common.utils
+* Remove is_uuid() from HeatIdentifier class
+* Use uuidutils from openstack-common
+* Add uuidutils from openstack-common
+* Update openstack-common
+* Remove heat-metadata service
+* heat engine : Convert WaitConditionHandle to pre-signed URLs
+* heat engine : subclass keystone client to encapsulate common code
+* Process engine config before initialisation
+* heat api : add waitcondition to cfn api
+* Add documentation on plugin_loader module
+* Lookup the class for an Instance in Autoscaling
+* Refactor autoscaling Instance creation
+* Load resources dynamically
+* Add a module for dynamically loading plugins
+* Distribute resource mapping to individual modules
+* Move the resource module out of the resources package
+* Remove YAML template trailing spaces
+* Convert some existing templates to YAML format
+* For Fn::Join join strings in resolve_static_data
+* Set default empty dicts for missing sections
+* Don't assume parsed JSON in REST API
+* cfn-json2yaml file-mode bugfix
+* pip-requires fix boto version
+* Utility to convert JSON template files to YAML
+* For tests, Parse all templates with parse_to_template
+* Parse all templates with format.parse_to_template
+* Module for converting JSON to YAML, and parsing both
+* Add packages and versions in response to grizzly-1
+* HAProxy example had incorrect descriptions
+* ReST API: Add Events
+* CFN API: Rename ID formatting method
+* RPC API: Return an identifier for events
+* Use the new class for database access to Events
+* Add a class to represent Events
+* Add a method for querying a resource's type
+* Add identifiers for Events
+* Improve the identifier class for Resources
+* Get db session from the context
+* Use a real context for tests
+* heat engine retrieve credentials every periodic task interval
+* heat engine Add admin flag to dbapi stack_get
+* Tool to download all Amazon example templates
+* r1 not defined
+* Remove unused statements/local assignments
+* heat engine allow WatchRule load() from DB object
+* heat engine move to per-stack periodic watch threads
+* add watch_rule_get_all_by_stack dbapi call
+* Make CloudWatchAlarm names unique per-tenant
+* WatchRule refer to stack by id not name
+* Provide more information with template URL error
+* Add missing logging imports
+* Use jsonutils in ec2token
+* Remove unused imports
+* Fix ppetit.template parameter type Integer -> Number
+* RPC API: Get rid of event_create call
+* ReST API: Add a convenience redirect for resources
+* ReST API: Add API for Resources
+* RPC API: Include less detail in resource list
+* Refactor unit tests for ReST API
+* ReST API: Move remote error handler to utils module
+* RPC API: Return a resource identifier
+* Add identifiers for resources
+* ReST API: Refactor routes
+* heat engine : remove now-unused metadata rpc calls
+* heat workaround for HA/Autoscaling regression
+* heat dbapi rename stack_get_by_tenant
+* Allow stack.owner_id to store a uuid
+* ReST API: Split utilities into a separate module
+* Actually validate properties of resources
+* Getting Started: Fix formatting errors
+* heat templates : align autoscaling alarm descriptions with values
+* heat engine : create boto config via instance userdata
+* heat engine : append watch server url to instance userdata
+* Don't use OpenStack plugin in tox
+* Always filter by tenant_id in stack_get_by_name
+* Align pip-requires versions with nova
+* heat align openstack/common with latest oslo-incubator
+* Modify identify_stack to check for uuid
+* heat engine : Don't wait() for killed greenthreads
+* Pass a Stack entity to Stack.load()
+* Switch to UUID for the Stack primary key
+* Add a list_stacks RPC call
+* Rename instance_id to resource_id
+* Move client connection out of resources.py
+* Fix FnGetAtt id test
+* Fix cloud-init runcmd to be exec friendly
+* Replace KeyStoneCreds params with X-Auth headers
+* Quantum template to demonstrate floatingip
+* Make Boolean property a bool type. Since json has a native bool type, allow bool or string as the property value. Validating a Boolean type value will now convert a string to a bool
+* A template which associates an instance with a Quantum port
+* Type is now mandatory. Boolean now exists
+* Handle list properties that do not contain objects
+* Remove the CheckedDict class
+* Use new Parameters class in unit test
+* Get rid of Resource.calculate_properties()
+* Add a Properties implementation with lazy loading
+* Avoid modifying the Properties of a Load Balancer
+* Fix schemata errors for properties
+* Add a set of native quantum resource types
+* Recursively replace all : with . in Output keys
+* Rename heat client to heat-cfn
+* Update openstack-common, add network_utils
+* Use openstack-common service.py
+* heat templates : Align AutoScaling template with cfntools
+* Add service.py from openstack-common
+* Update openstack-common
+* Implement NoEcho for parameters
+* Use new Parameters class for validation
+* Separate Parameters implementation from Properties
+* Clean up hacks for parameter passing in unit tests
+* Put the Template class in its own file
+* heat-keystone-setup : fix error on folsom first-install
+* heat engine : add heat_waitcondition_server_url
+* heat metadata : Remove all non-waitcondition related logic
+* heat metadata : remove metadata_url logic
+* Format stack_identity as id *and* links
+* Move resources into a separate sub-package
+* Move Timestamp code to separate file
+* heat-keystone-setup : change role to heat_stack_user
+* heat engine : add template-defined users to keystone role
+* heat engine : Allow instance users to view their own details
+* heat-keystone-setup add instance role
+* heat-keystone-setup workaround keystone arg syntax
+* heat-keystone-setup workaround keystone output reordering
+* heat tests : StackBoto fix _check_*_result functions
+* heat tests : refactor stackid check into utils.Stack
+* heat tests : fix CFN_API_Actions test fix state reason
+* heat tests : fix CFN_API_Actions test stackid regex
+* heat engine : kill running greenthreads on stack_delete
+* heat engine : Store all resource states to DB
+* Bump version to v8
+
+v7-branch-eol
+-------------
+
+* heat engine : Make Resource::swift handle auth_token
+* Cleanup runcmd to exit 0 and not use 'type'
+* ReST API: Add a keystone endpoint
+* Handle %(tenant_id)s in endpoints when updating
+* Change the service user to match devstack
+* Pass the correct tenant for the service user
+* Start and enable libvirtd
+* heat engine : Resource.keystone handle auth_token
+* heat engine : Rework auth.authenticate
+* heat engine : remove unused EC2 style auth from engine
+* ReST API: Format output as JSON
+* Do not assume host has selinux utils installed
+* Identify stacks using tenant UUIDs
+* Make default distribution U10 for deb template
+* heat engine : Make wait-condition poll interval better
+* Handle upgrades in heat-keystone-setup
+* Rename CloudFormation service to heat-cfn
+* heat tests : Remove utils.Stack getter methods
+* Use password in preference to token if both supplied
+* heat tests : add ValidateTemplate test to CFN_API_Actions_Boto test
+* heat tests : Add ValidateTemplate test to CFN_API_Actions test
+* heat API : ValidateTemplate fix response format
+* heat : heat cli pep cleanups
+* heat : boto_client_cloudwatch allow credentials override
+* Catch SSH Disconnection errors in functional tests
+* heat : add template-swift-url option to client
+* heat cli: encapsulate template arg-parsing
+* heat engine : remove unused validate_template params
+* Obey the passed in distro value in HAProxy template
+* Use --script option to parted in templates
+* Reduce timeout periods in functional tests
+* ReST API: Add unit tests
+* heat : Getting started updates for Cloudwatch
+* Getting Started: Fix IP address determination on F17
+* heat engine : Move watch logic into WatchRule class
+* ReST API: Report template validation errors
+* ReST API: Return appropriate error codes
+* ReST API: Separate out code to fetch template from a URL
+* heat : db API add watch_rule_get_by_name
+* heat : db API add watch_rule_update DB API action
+* heat : Remove cloudwatch functionalty from metadata server
+* heat templates : Add boto config to HA templates
+* Unit test for load balancer resource type
+* heat : Add missing calculate_properties to user resource
+* heat engine : Avoid printing credentials to logfile
+* heat engine : only attempt stack update from valid states
+* ReST API: Add some simple API documentation
+* ReST API: Use JSON documents for data input
+* ReST API: Refactor handling of input data
+* ReST API: Fix template validation
+* heat : workaround engine error with version code
+* Change endpoint service type from orchestration to cloudformation
+* Fix versioning code
+* Remove unnecessary keystone scripts
+* Fix bugs in ReST API stack creation
+* Allow authentication to Nova with a Keystone token
+* heat engine : workaround lack of no_cache on essex
+* Avoid create_stack RPC call timing out on precise
+* Fix hash-bang directive in nova_create_flavors.sh
+* import gettext to fix db migration execution
+* Make sure to remove python-glanceclient too
+* heat tests : add functional test for UpdateStack
+* heat tests : functional utils support for UpdateStack
+* heat tests : Add new boto API test
+* Add the beginnings of an OpenStack ReST API
+* heat tests : API test fixup for ResourceProperties
+* Allow separate versioning of each API
+* heat API : return ResourceProperties as JSON
+* Move CloudFormation API to heat.api.cfn package
+* Make the keystone service type configurable
+* Unit test for DBInstance resource
+* Add a Folsom specific heat-keystone-setup binary to bin
+* heat engine : format stack outputs for updated stacks
+* heat : fix glanceclient deprecation warning
+* Fix test_waitcondition.py race by converting to mox
+* Rename heat/cloudformations.py to heat/cloudformation.py
+* Trivial unit test changes
+* Switch to in-memory sqlite for unit tests; 1500% speed improvement
+* Move test skipping on import failure from package to function
+* Get rid of gratuitous params in RPC API
+* Unit test coverage for user resources, plus some user fixes
+* Change file to executable to get rid of rpmlint warning
+* Version 6 about to be announced for release, time for v7
+
+v6.release
+----------
+
+* heat : HA functional test missing import
+* heat tests : convert HA test to exec_sudo_command
+* heat tests : Fixup IHA functional test
+* heat tests : functional tests add exec_sudo_command
+* Don't fail to delete if VolumeAttachment not found
+* Improve debugging ability for functional tests
+* Fix typo in test file name
+* heat tests : fixup test_CFN_API_Actions.py
+* Stop deprecation warning when creating resources directly
+* Unit tests for volumes and attachments
+* Update another embedded template to F17
+* Changed embedded loadbalancer template to use F17
+* heat API : fix wrongly named key for stack events
+* heat : ensure DB user creds aren't written decrypted
+* Fix scoping issue
+* Make instance match expected name
+* Look for instance name that matches template
+* Provide full URL address in AutoScalingMultiAZSample.template
+* Tag functional tests with the JEOS required
+* Make automated scripts quieter
+* Implement test_AutoScalingMultiAZSample.py
+* heat engine : loadbalancer add missing calculate_properties()
+* heat engine : convert stack resource to physical_resource_name
+* Return exit code rom run_tests.sh
+* Avoid test runner crash when we have no tty
+* Unit tests for autoscaling resources. 100% coverage!
+* heat tests : New wordpress IHA functional test
+* Tests EIP resource creation and association
+* Allow linux distribution to be passed to multiaz template for test case
+* Fix backtrace when using loadbalancer
+* Fix spelling errors in loadbalancer which resulted in template not launching
+* Remove unnecesssary nova constructor calls in each manager API call path
+* Fix up tags
+* Fix test_WordPress_2_Instances_With_EBS.py
+* Change templates to launch F17 (not F16) by default
+* heat tests : add HAProxy functional test
+* heat templates : add LinuxDistribution parameter to HAProxy
+* heat tests : functional tests allow non-default stackname
+* Switch to Fedora 17 on guests in Getting Started
+* heat : Show user parameter values in heat describe
+* heat tests : expose keyname from Stack object
+* Work around nova-network launch issue harder
+* Use stack_identity where it has changed from stack_name
+* Unit test S3 Bucket resource with associated fixes
+* Use openstack.common.timeutils.isotime()
+* Work around nova-network launch issue
+* Change rpc cleanup to occur before killing engine thread
+* Add new OpenShift test
+* heat tests : new functional test for CFN API
+* heat tests : Update test_WordPress_With_RDS
+* heat tests : remove duplicate cleanup Wordpress_Boto
+* heat tests : bugfix utils cleanup function
+* heat tests : bugfix utils cleanup
+* tests: Wait for delete completion
+* tests: Clean up after a failed functional test
+* tests: Make StackBoto inherit more from Stack
+* tests: Fail promptly on stack creation failure
+* Add Wordpress_2_Instances testcase
+* Add test_WordPress_2_Instances_With_EBS_EIP.py
+* heat tests : functional test utils add response_xml_item
+* Fix timing issue in starting openstack-network
+* There is no spoon take 2
+* There is no spoon
+* heat : Revert "Make sure the properties are defined in all cases."
+* heat : bugfix convert User resource to physical_resource_name()
+* creating instances failed as a result of regression in last commit
+* Update openstack-common
+* Make physical resource names unique based upon stack name
+* Change Stack to support user defined parameter
+* Add 2 instance with EBS test
+* Change VerifyClass to have a generic verify_url method
+* Update WordPress_Compsed_Instances to new test infrastructure
+* Make S3 import except on ImportError rather then all exceptions
+* Make S3 optional since swiftclient is not available in all distributions
+* heat : test utils, extract ec2 credentials from keystone
+* heat : allow boto_client to accept credentials
+* heat : move boto.cfg to correct location
+* heat : comment credentials in template boto.cfg
+* heat tests : add new Boto wordpress functional test
+* heat tests : functional test utils add StackBoto class
+* Implement the AWS::S3::Bucket resource type
+* Update documentation on configuring metadata server
+* Handle verification errors in create/update in cfn API
+* heat tools : nova_create_flavors.sh additional retry logic
+* heat tools : add ephemeral disk for all flavors
+* heat tools : check services running after openstack install
+* Rework functional test case infrasatructure
+* Add a string representation for identifiers
+* Add unit tests for EngineManager create/update/delete_stack
+* Fix update_stack call in EngineManager
+* Reorganise etc directory for easier installation
+* Delete unused heat-engine-paste.ini
+* Make sure the properties are defined in all cases
+* Add test case for WordPress_With_LB.template
+* Add a Wordpress+MySQL composed instance functional test case
+* Add EBS test
+* heat tests : new wordpress EBS_EIP functional test
+* Forgot commas, doh!
+* More EBS fixes
+* Rename heat-api to heat-api-cfn
+* heat templates : EBS templates, attach volume to vdc
+* heat tests : bugfix FuncUtils check StackId not StackName
+* heat templates : Add default LinuxDistribution parameter
+* Fix identify_stack call
+* Modify to use systemctl and move func_utils outside of setUp
+* Add a newline to user data injection
+* Fix pep8 warning
+* Support lookup of stacks by name or ARN
+* Add an identify_stack RPC call
+* Report StackId in ARN format
+* Create a unique identifier for stacks
+* Use assertEqual() instead of assert_()
+* heat tests : add functional test for Wordpress RDS
+* heat tests : convert functional test to class
+* heat tests : update WordPress_Single_Instance_With_EIP
+* heat tests : convert functional test to testcase class
+* heat tests : FuncUtils use heat_client in create_stack
+* heat tests : FuncUtils cleanup use heat_client
+* Switch to keystone service_type=orchestration
+* heat tests : test_WordPress_Single_Instance.py update
+* heat tests : Add verify_wordpress helper function
+* heat tests : FuncUtils add get_stack_output function
+* Fix support for eventlet 0.9.16
+* heat tools : add qpid-cpp-server-daemon to tools/openstack
+* Add functional test for HA template
+* heat : run_tests.sh allow easier test selection
+* heat cli : initial heat-watch cloudwatch API client
+* heat API : Implement initial CloudWatch API
+* heat engine : Add set_watch_state engine RPC action
+* heat engine : Expose valid watch states via engine.api
+* Add new functional test for WordPress_Single_Instance_With_EIP
+* Connect to heat client, add accessor method, and fix ip check
+* Add new methods to get access to nova/glance clients
+* Make sure the functional test always cleans up
+* heat API : add get_param_value to API utils
+* Add new arguments to run_tests
+* Refactor reformat_dict_keys()
+* Refactor extract_param_pairs()
+* Refactor extract_param_list()
+* Add link to RPM repository in getting started
+* heat API : Add api.aws.utils.extract_param_list
+* heat tests : rename test_stacks
+* heat tests : add test for new manager show_watch_metric method
+* heat tests : add tests for new manager show_watch method
+* heat engine : bugfix show_watch, fix single-watch mode
+* heat tests : add new engine rpcapi unit tests
+* Add test-requires in RPM package list form
+* Set the max url length in eventlet 0.9.17
+* Functional test improvements
+* Fix the Timeout/Interval check in the LB
+* Fix the way self.properties is checked for a value
+* Make RDS (mysql) wait until setup is finished before proceeding
+* Put selinux in permissive mode by default via a runcmd in cloudconfig
+* heat API : make extract_user_params more generic
+* heat engine : Add show_watch_metric RPC action
+* heat engine : add show_watch RPC method
+* Split functional test into standalone and utility class
+* heat DB : make watch_data_get_all work with no watch ID
+* heat API : Add HeatAPINotImplementedError exception
+* heat API : Move aws api common code into aws/utils.py
+* heat API : move remote_error to common exception.py
+* heat API : move aws common files from api/v1 to api/aws
+* heat engine : Fix engine.api variable shadowing
+* heat tools : glance-jeos-add-from-github avoid duplicates
+* heat tools : glance-jeos-add-from-github scrape image names
+* Inject command into userdata
+* Add a tool to register prebuilt JEOS images into glance from github
+* heat template : Align two Openshift template varieties
+* Use cached keystoneclient
+* heat cli : Workaround inconsistent boto return type
+* heat cli : Rework to separate cli tool from client-API wrappers
+* heat cli : remove some duplication from parameter formatting
+* heat cli : remove unused paths from heat cli tool
+* Update Getting started to match change to heat-jeos
+* heat api : bugfix, save config correctly in EC2Token
+* heat templates : Add openshift template for pre-built jeos
+* Getting Started: Add configuration info for the metadata server
+* Getting Started: Use install.sh script
+* Make template params resolution standalone
+* change amd64 reference to x86_64 to match latest cfntools
+* Remove crankcase patch since fix was merged upstream
+* Add calculate_properties() to update() and restart_resource()
+* Force rpm to retry indefinately during crankcase build
+* Log all startup operations to /var/log/heat-startup.log
+* Port existing rpc calls to use the new RPC client API
+* Implements a client side engine RPC API
+* heat templates : update Openshift template to add node instance
+* heat : Make instance flavors consistent
+* heat engine : raise appropriate error for incorrect stack_name
+* heat API : Return correct AWS error response for invalid parameter
+* Bump to v6
+
+v5.release
+----------
+
+* heat engine : Avoid writing to class-scope parameters schema
+* Update getting started with credential crypto
+* Add tools directory to python package
+* Don't use uuidgen in install.sh
+* Add encryption support for authentication information in db
+* Change to per-tenant stacks
+* Make a template that demonstrates instance monitoring and restarting
+* Call calulate_properties() before calling FnGetAtt()
+* Log the error when a resouce fails to delete
+* heat API : Add more tests covering error paths
+* delete duplicate validate() method
+* loadbalancer: implement Interval and Timeout
+* autoscaling: implement DesiredCapacity
+* Update GettingStarted guide to use correct state name
+* Get rid of PyCrypto dependency
+* heat API : Add more unit tests
+* Add AWS::RDS::DBInstance
+* autoscaling: don't kill all instances when scaling down
+* make the autoscaling template easier to debug
+* Return the name from the autoscaling group not the instance
+* Add python-psutil and fix cfn-push-stats options
+* Add an EC2Token_filter_factory and use it as the default paste filter
+* heat api/engine : Implement UpdateStack functionality
+* heat db : fix per-object delete
+* Combined autoscaling and loadbalancer
+* Optimize filter context
+* convert to float instead of int in the watch rule
+* Allow nested stacks to be retrieved by name
+* Use eventlet's wsgi again
+* Don't require user params on template validation
+* tools: erase openstack-utils only after using it
+* Update openstack-common
+* Erase openstack-utils when uninstalling OpenStack
+* heat : update config files with new rpc backend
+* Import openstack.common.rpc
+* Use global cfg.CONF instead of config classes
+* Get rid of eval() in authentication code
+* heat engine/API : Internal API rework
+* Account for XML output in Getting Started script
+* Fix directory changes in Getting Started script
+* Allow non-interactive installation of OpenStack
+* Document Metadata server in Getting Started guide
+* Import openstack.common.log and use inside heat infrastructure
+* Update openstack-common in prep for pulling in common.rpc
+* Set the stack updated time through the Timestamp
+* Eliminate DB access from the engine API
+* Make timestamps available in Stack/Resource objects
+* heat cli : Manpage updates
+* heat engine : fix create_stack response format
+* heat API : Add missing StackId prefixes
+* heat engine : move StackId formatting into API
+* Block on instance delete until delete operation completes
+* heat engine : Store stack timeout in database
+* Display better message on Keystone failure
+* Speed up metadata server registration
+* Fix the WordPress puppet template syntax
+* Optimise DB lookups by ID
+* Raise the correct error when a stack is not found
+* Access Resource metadata through the new attribute
+* Add a helper class for metadata
+* Add unit tests for metadata read/write in heat-engine API
+* Avoid unneccesary template parsing
+* Allow partial template parsing
+* Rename resource_id to resource_name in metadata API
+* Report errors from nested stacks
+* Speed up engine manager unit tests
+* Update JEOS example in Getting Started
+* heat cli : Align resource-list-details usage with other commands
+* heat API: bugfix to XMLResponseSerializer
+* heat engine: raise appropriate error on bad stack name
+* Add DB refresh/expire on specific parameters
+* Allow Status(Reason) access through Stack/Resource objects
+* Rename test_resources to test_instance
+* heat API : Return auth errors in AWS format
+* heat : heat-boto remove boto.cfg reading
+* Separate out formatting for Engine API from manager
+* Add new assertions about event unit tests
+* Add basic autoscaling
+* Add NovaSchedulerHints and correct the implementation of Tags
+* heat tools : openstack script don't create duplicate pv's
+* heat tools : openstack script add restart option
+* heat tools : whitespace cleanup in tools/openstack
+* heat tests : Add missing headers to tests
+* heat API : cleanup docstrings
+* Add monitoring to the loadbalancer
+* Add an OpenShift template
+* Pass Tags into scheduler_hints
+* heat tools : heat-db-drop prompt for missing password
+* heat API : Convert API to use HeatAPIException subclasses
+* heat API : Implement API specific exceptions
+* heat : add heat-boto test client
+* Add more unit tests for the engine API
+* Store the context in the resources
+* Add Metadata to detailed Resource output
+* Use a consistent stack ID
+* Make Stacks the owners of their own DB representation
+* Don't store the metadata server address in the Stack
+* Delete user creds from DB when no longer required
+* Remove parsed template from database
+* Make LoadBalancer a subclass of a nested stack
+* Use unittest assert*() methods instead of assert keyword
+* Switch .gitreview to use OpenStack
+* Add the loadbalancer resource
+* Add the Fn::GetAZs() intrinsic function
+* Teach CheckedSchema to do nested schemas
+* heat API : Add missing Response wrappers
+* heat API : Make CreateStack work with boto
+* Add unit tests for timeout extraction
+* heat API : DescribeStacks return all when no stack name specified
+* Fix typo in stack creation code
+* Change oz rpm install to use yum
+* heat engine : Return timestamps formatted by heat_utils.strtime
+* Clean up pip-requires for stackforge
+* We don't need to be installable via PIP so remove build and install deps
+* Don't go fishing in the stack for the KeyName
+* Tidy up create timeout code
+* Get rid of _wrap_db_error()
+* Bump to v5
+
+v4.release
+----------
+
+* Store the user parameters in the stack table
+* heat GettingStarted guide, add oz install instructions
+* Add nested templates that implement a simple proxy/loadbalancer
+* Pass the stack_id into the resource_metadata_update
+* Do not remove qpid-cpp-server as it is part of openstack erase
+* Few small fixes for getting started
+* Remove --root=/ in install script
+* Add keystone create script for devstack
+* heat API : Align DescribeStacks response with AWS docs
+* heat API : Escape JSON TemplateBody XML serialization
+* Add uninstall script for Heat
+* Factor out authenticate method for engine
+* Fix metadata startup
+* Change install.sh to work on fresh install
+* Fix path to cloudinit directory
+* Ignore the unimplemented properties of IAM::User
+* Don't use json.dumps() on the output of get_template
+* Fix EIP template
+* Remove service name from nova() def
+* heat API : Add support for ContentType=JSON query parameter
+* Fix Stack initialisation
+* heat templates : Cleanup README and template whitespace
+* Fix the wait condition's reading of the metadata
+* Fix a typo (from the commit to use state instead of parsed_template)
+* Use the correct resource name
+* Make the describe-resource API calls user-aware
+* DB: add stack status & reason, resource metadata
+* Use the resource.state_description
+* Don't remove resources from the DB during HA restart
+* Make the saving cfn-signaling more reliable
+* Remove duplicate setup_logging()
+* Work around keystone strangeness (error deleting user)
+* Fix db exception description
+* Fix the metadata rpc functions
+* heat API : Align response StackId with AWS spec
+* Add more per-user stack support (2)
+* Add example templates for nested stacks
+* Add execute bits to executable scripts manage.py and runner.py
+* Fix DB calls in Resource API
+* Add describe resource API calls
+* heat api/engine : Reworked approach to aligning with AWS date format
+* heat API : Align time format with AWS spec
+* Lengthen the timeout of the WaitCondition in the HA template
+* Change create_watch_data from POST to PUT
+* Get the context from the db not the context of the guest tool
+* Implement Nested Stacks
+* Move parsing of parameters out of template parser
+* Get stacks from the DB by either name or id
+* Lock to pep 1.1
+* Fix latest DB migration script
+* Raise NotFound exceptions from database
+* Tidy up Resource creation and deletion
+* Do proper dependency calculations
+* heat manager : rename dict keys to align with AWS API
+* Add a better error message
+* Add a user creds database table and associate stacks with username
+* Fix the metadata server auth (KeystoneCreds only sent from heat)
+* Fix the error reporting
+* Add manpage for heat-metadata
+* heat API : return response body as XML not JSON
+* Add heat-db-setup.1 manual page
+* Pass Full Credentials to Engine
+* Implement the user/access keys using keystone
+* Allow an already deleted watch to not fail the stack.delete()
+* Delete redundant escalation_policy (rather use instance.restarter)
+* Make sure create happens if a resource has been deleted
+* Make sure the 'nova_instance' is refreshed when ever the state changes
+* When restarting a resource make sure that the parsed_template_id is set
+* Fix heat-jeos installation in Getting Started
+* Make heat-keystone-service a tad more robust
+* Add install.sh
+* Add EstimateTemplateCost API
+* Add the GetTemplate API
+* Remove cfntools and jeos
+* Convert getLogger(__file__) into getLogger('heat...')
+* Add a Timeout (-t) to the heat options (and make -f for templates)
+* Fix the setup of daemon config
+* Update openstack-common
+* Improve parser readability + add unit tests
+* Fix parsing of metadata
+* Rely on instance_id been set to None
+* wait_condition: use properties not t['Properties']
+* Fix cloudwatch delete
+* Fix restart_resource()
+* Pass the context to the db calls
+* add user auth to ha template
+* Make sure the resource exists before trying to update it
+* Fix the conversion from instance to resource name
+* Restructure watchrules to make them more testable
+* Add missing properties to cloud watch
+* Change command interpreter to bash
+* Add qpid-cpp-server to the openstack setup script
+* Teach heat-api about the bind_host
+* Refactor template resolution
+* U10 wordpress template
+* Fix new pep8 warnings
+* Fix the Getting Started guide for the new setup.py
+* Refactor Resource creation
+* Clean up imports
+* Don't use sys.exc_value
+* Get list properties working again
+* Remove _authenticate() check for metadata calls (temp)
+* Fix the HA template (sed the username/password)
+* Fix apt-get install
+* Remove python 2.7ism
+* Compress qcow2 files to take up less disk space
+* Install argparse and update the U10 package cache
+* Fix auth failed exception handler
+* Set stack's `updated_at` time
+* Add instance restarter
+* Add a name to the checkeddict to improve the error messages
+* Authentication Overhaul
+* Changed SecurityGroups property type to TuplesList
+* Change the policies for User to TuplesList
+* Add missing flags to enable working with RabbitMQ
+* cloudwatch: set HA template to send watch data
+* Add the basic cloudwatch feature
+* Add missing "properties_schema" to WaitConditionHandle
+* Fix jeos_path when not intalled as an egg
+* Allow login to U10 jeos launched from heat
+* Changes to checkeddict for tuples and required
+* Make i386 cfntools jeos work
+* Add U10 JEOS support to heat jeos_create
+* Validate all resource properties
+* Add functional test to verify jeos and stack ops
+* Fixing variable name for debug message
+* using the calculated path for the template tests
+* Update resource statuses in the database
+* Fix deletion of security groups
+* Only run cfn-init once
+* Use the new CheckedDict for Parameters
+* Add some better checking for parameters and properties
+* Fixing path lookup to make sure the templates can be found
+* Adding the AWS::IAM::User and AWS::IAM::AccessKey to the mapping
+* tools/openstack: Updated to latest openstack F16/F17 tools
+* Update gitreview for new Stackforge remote
+* Align with project standards
+* Fedora openstack projects use new tools to setup databases
+* Add .gitreview for Gerrit
+* Add an integration test script
+* Pep8 fixes
+* Fixing _decompress to handle bundled and compressed
+* Handle failures when deleting stacks
+* Fix problem with updating parsed template in DB
+* Fix copy-paste errors in template descriptions
+* Improvements to uninstall script
+* Refactor some not-particularly-Pythonic code
+* Delete networks when erasing OpenStack
+* Adding chaining to CommandRunner
+* Making PrivateDnsName return the ip address
+* Adding puppet and puppet master instances
+* Wait for instance startup in GettingStarted test
+* api : fix pep8 warning
+* Allow engine and metadata server start in any order
+* Making PrivateDnsName return the ip address
+* Clean up the API routes
+* Adding puppet and puppet master instances
+* Clean up the API routes
+* Make the wait condition behave better when the stack is deleted
+* heat cli : Add options to bash completion script
+* heat client : reduce duplication between functions
+* API and heat-cli rework to align with AWS CloudFormation API
+* Report errors when resource creation fails
+* Modify command names for consistency
+* Updated the version to 4
+* Make 'heat help' show a list of commands
+* Allow the Getting Started script to run non-interactively
+
+v3.release
+----------
+
+* Fix pep8 errors
+* Set cfn-hup to send events to the metadata server
+* Slim down the getting_started template
+* Check for the presence of Metadat before trying to include it the multipart
+* Add status argument that shows service status for all required services
+* Kill some pep8 errors in test_stacks.py
+* Kill some pep8 errors in engine directory
+* Kill few pep8 errors
+* Properly test ref valid against proper input
+* Use manager to test ref validation
+* Add test cases to test valid and invalid keys in FindInMap
+* List stacks tests
+* Move list_events into the class
+* Factor out a start_wordpress_stack()
+* Add event_list test
+* Add uninstall script
+* Add Getting Started guide to repo
+* Add cfn-get-metadata to the manifest
+* Fixed problems with starting MySQL in heat-db-setup
+* Add test_validate_ref for invalid and valid inputs
+* Check for invalid Fn::FindInMap key
+* Check for invalid Ref keys in validate
+* TEST: slightly better version with minimal template in place
+* Add volumeattachment validation
+* Allowed the database call to return no parsed template
+* Adding a deepcopy of the template before stack create validation
+* Add stack delete test, and set stack to DELETE_COMPLETE when done
+* Removing stack validation on create
+* Adding stack create test
+* Validate invalid mountpoint.device entries
+* Allow sending events using metadata server
+* Typo in a logging declaration
+* Fix stack creation - CREATE_FAILED issue
+* Add ability to automate testing with tox
+* Add option to exclude pep8 examination to run_test.sh
+* Add test coverage option to run_tests.sh
+* Connect up the waitcondition code to poll the metadata for the signal
+* Save to parsed template as that is used in the parser
+* WaitCondition: fix the url to the new metadata server
+* Add WaitConditions to HA template
+* Download cfn tools from the master branch
+* Escape the quotes going into cfn-signal shell command
+* More peppy fixes..
+* Add implementation to cfn-signal
+* Fix undefined LOG variable in db.session
+* Remove unused "cloudinit_path" setup in resources.py
+* Metadata: Add bind_host to the config
+* Register metadata server's entry point with Engine
+* Remove obsoleted metadata files
+* Connect metadata server to the engine via RPC
+* Moving key validation into instance validate
+* Apparently boto expects / to be list stacks
+* ValidateTemplate API call framework
+* Fix the sql in the rails template (didn't work with the mysql in f16)
+* uncommenting the metadata server attribute so the tests work
+* Validating the KeyName against nova on stack_create
+* Connect cfn utils to the remote server
+* Fix cfn-get-metadata params and output
+* Fixed the interpretation of the file extension
+* Only showing the Outputs when the status of a stack is CREATE_COMPLETE
+* Fix unbound error in cfn_helper
+* Adding mime_string to the Instance instance and fixing tests
+* Fix some indentation and pep errors
+* Hack the Rails template to work
+* Add Rails template example
+* Add dummy cfn-signal
+* Add WaitConditions
+* Split the resourses up into seperate files
+* Handle "sources" in cfn-init
+* Initial metadata server API
+* Add very basic support for installing (apt, python & gems)
+* Add cfn-get-metadata to files section of cfntools tdls
+* Modified README in tools directory to explain a few more tools
+* Scoping the session per thread (request)
+* Oops, meant for website repo
+* Heat Logo
+* Skipping the import if its deps aren't installed, use --no-skip if you want to run this
+* Copied the python-novaclient test code to avoid importing via python path
+* Adding the metadata.log file
+* Finish necessary changes related to jeos_create move
+* Add skeleton structure for the metadata server
+* Update heat-api docstring
+* more pep fixups
+* Add cfn-get-metadata make all cfn tools more consistent
+* openstack-common: timeutils and importutils seperated out
+* openstack-common: update cfg.py
+* Move jeos_create into utils so it can be imported
+* Put Starting Heat API in log file and add logging setup to bin/heat-api
+* Remove stray print debug message
+* Quiet down the QPID logging since it isn't helpful and makes logs hard to read
+* Kill prints and replace with LOG in heat/rpc/__init__.py
+* Stub out system calls in metadata_files test
+* Implement runas for cfn-hup
+* Add test artifacts to gitignore
+* Handle cfn-hup non-value parameters
+* Moving db error wrapping into heat session to avoid a nova import
+* Add an easier way to update the cfn scripts
+* Fix up the template - some scripts not right
+* Fix the cfn logging
+* Fix userdata mime creation
+* Fix userdata mime creation
+* Add a real creds file for the cfn-hup config tests
+* Re-add the file logging to cfn tools
+* Make sure AWS::StackName is avaliable
+* Add cfn-hup config into template
+* Copy the single inst. wordpress template to With_HA
+* removing import of common config because it needs credentials
+* Adding the nova.exeption import to fix the tree
+* Add file support to cfn-init
+* Adding instance delete test
+* Log when cfn-hup couldn't restart a service
+* putting python-novaclient back in pip requires
+* Removing nova from pip requires
+* Make heat-db-setup generic enough to run on RPM or DEB distributions
+* Adding the nova module to the pip-requires
+* removing import of common config because it needs credentials
+* Adding the nova.exeption import to fix the tree
+* Use pip package name, not the RPM one
+* Update virtual-env requires and documentation
+* Make cfn-hup configuration handling closer to aws
+* Better error messages for cfn-hup configuration
+* more work on cfn-hup
+* Add test case for boolean
+* Assert the instance auto increment on the id worked
+* Removing the run_tests.py, was replaced by heat/testing/runner.py
+* Changing version scheme to just major
+* Adding instance creation test
+* Fix `to_boolean` in cfn_helper
+* Try and keep track of the stack status
+* Added db setup and teardown with sqlite
+* Adding unit test for instance creation
+* Adding resource initialization test
+* Adding instance creation test
+* Added db setup and teardown with sqlite
+* Adding unit test for instance creation
+* Adding resource initialization test
+* Initial cfn-hup (wip)
+* Move common cfn code into cfn_helper.py
+* Fix more pep8 errors
+* Update version to v3
+
+v2-M1.release
+-------------
+
+* Wordpress 2 instance with EBS and EIP
+* heat cli : Add bash_completion.d entry for heat
+* heat cli: Use python logging module
+* Fix another print -> logger.warn
+* resources.py had a bunch of print's in it
+* Add an exception around EIP fetching
+* Fix a typo in the command line help
+* Use v1 / v2 / v3 for version numbers to match tags
+* Set proper author and mailing list in setup.py
+* Remove BUILDING.rst since there is no building taking place inside project
+* Remove rpm spec file and Makefile. Will track packaging in a different repo
+* Remove tito - likely track this in a different repo
+* Fix the EIP cleanup
+* Add documentation for the per command CLI help options
+* heat, heat-api: Add missing licence to header
+* Remove rootpw from tdls and add ec2-user to sudoers file
+* Deleting parsed and raw template when deleting stacks
+* A little more detail on network create
+* Fix the test environment
+* Fix another template attribute in the output section
+* Use the correct api to get the volume object
+* Save the resource if complete or failed
+* Fix the delete of a volume attach when the create partially succeeded
+* To properly populate the output section
+* Use the instance_id for the event "physical_resource_id"
+* Fix the output attribute in single instance wp template
+* Save the parsed_template so user parameters are available
+* Fix the parsed_template columns (missing created_at and updated_at)
+* Fix the version file (don't import glance's git commit)
+* Add WordPress_Single_Instance_With_EBS_EIP.template
+* Rename EBS_Volume to just EBS to pave way for EBS_EIP
+* Make WordPress_Single_Instance_With_EIP.template work
+* Initialize sec to None to avoid exception in security group
+* Fix invalid JSON in template
+* Store all event data in DB
+* Remove hard-coded paths from DB setup script
+* Avoid printing exception in db-setup
+* Handle exception on Ctrl-C
+* Updated WordPress_Single_Instance.template to work properly
+* Update templates README with list of secure vs insecure templates
+* Make WordPress_Single_Instance_With_EBS_Volume.template functional
+* remove old experimental code
+* kill all pep8 errors in parser and resources
+* Updated templates/README directory to more clearly explain templates
+* Rename WordPress_Single_Instance_cfntools.template to not have cfntools in name
+* Rename WordPress_Single_Instance.template to have gold in name
+* Adjust cfn-init -f flag to be implicit
+* Adjust cfn-init to not use -f option
+* Adjust cfn-init to not take a parameter in the initialization
+* Fix bug in path on cfn-init
+* Fix for issue #75: no more -f in cfn-init
+* gold plating the WordPress_2_Instances template
+* Wordpress 2 with EBS working
+* Resolving rpmlint errors and adding man pages
+* Register security group with launched instances
+* Fix creation of security group and rules
+* Fix a heap of pep8 errors
+* Make an attempt at passing exception messages from engine to cli
+* Fix 'heat describe'
+* Add a traceback on exception caught
+* Add a README to the templates directory to aid in navigation of the templates
+* Add a tools/heat-db-drop script for fatal error recovery
+* Make Wordpress_2_Instances.template work properly
+* Check errors better in resolve_attributes()
+* Add yum-plugin-fastestmirror on F17-x86_64 cfntools image
+* Add yum-plugin-fastestmirror to the cfntools images
+* Update WordPress_2_Instances.template to use cfntools and cfn-init
+* resources: remove insert_package_and_services
+* Properly launches a cfntools image with the appropriate userdata mime blob
+* Correct path to cfninit data
+* Yet more typos in cfntools template
+* Fix typo in template
+* Add a cfn-init call to cfntools
+* Automatic commit of package [heat] release [0.0.1-1]
+* Adding instructions on building the project with tito
+* Removing the PKG-INFO and vcsversion.py from the rpm
+* Initialized to use tito
+* Add unit test framework nose and associated helper scripts
+* Document all methods in the EngineManager class. These ones seem important
+* Updating the heat spec to pull in cloudinit files and i386 jeos templates
+* renaming CloudFormations to CloudFormation
+* Handle errors when listing events
+* Show stack description when status is unknown
+* Allow listing of all events
+* Use security groups in the multi-instance wp template
+* Fix listing stacks
+* Fix the stack.delete() by populating the resource id/state from the db
+* move the db stack delete into parser.py as it is non-blocking
+* Cleanup db imports (use heat code, don't import nova modules)
+* Consistently create the db resource entry
+* Add SecurityGroups to make is easier to use EIP
+* Eliminate overly-broad exception catching
+* Improvements to DB setup
+* Issue #52: Fix error in db-setup script
+* Start systemd services properly with cfn-init tool
+* Fix the jeos path when running from installed code
+* Delete extra white space
+* Fix 'heat list' when there are no stacks
+* Make jeos_create aware of existing disk files and previous glance registrations
+* Update F17 cfntools image to properly boot for cloudinit
+* Add ec2-user to F17 x86_64 tdl
+* add ec2-user to F16 cfntools image
+* Update i386 F16 cfntools image to match latest cloudinit features
+* updated F17 x86_64 cfntools tdl to new cloudinit model
+* Install cloudinit specific files that are loaded into the mime userdata
+* Updated x86_64 cfntools tdl to work with broken F16 repos and cloud-init
+* fixing small sed typo
+* Add elastic IP and userdata to 2-instance template
+* Fixing the heat events_list <stack name>
+* Move the EIP settings into a different template
+* Initial ElasticIp work - not quite working
+* Add newly added tdls to manifest
+* Add 32-bit tdls for Fedora 16,17 jeos (gold and cfntools)
+* Fix exception getting events list
+* Import missing exceptions
+* Fix setting of admin role in keystone service
+* Resolving functional conflicts from merge
+* Adding new files to heat.spec file
+* Defaulting to the mysql db_backend, removing anydbm
+* Making delete stack work
+* Persisting resources
+* Made datetime objects JSON compatible by calling their to string functions
+* Integrating all stack, template, and event calls with database
+* Fix reporting of RemoteError exceptions from AMQP
+* Handle missing config file
+* Fix silly spello
+* Record the reason for any failures
+* Make better use of cloud-init
+* Make the create/delete non-blocking
+* Fix path to keystonerc
+* Rename cftools to cfntools in the wordpress single instance template
+* Put cfn-tools into the cfntool image
+* Renamed all occurrances of cftools to cfntools to be more consistent
+* Move cfntools to heat directory so they are accessible by jeos_create
+* Add 2-instance Wordpress template without EBS
+* Try harder to detach the server volume
+* Don't use the "depends_on" in resource.start
+* Cleanup some prints in the resources
+* Add a 2 instance wordpress example
+* Improve the ordering of stopping resources
+* Issue #54: Getting started with cfn-init
+* Get the volumes working properly
+* Add documentation for heat jeos_create function
+* typo fix in jeos_create
+* Fix "heat list" only showing empty list
+* Add utils & exception from openstack-common
+* Use local.py from openstack-common
+* Add F17 cftools TDL
+* Add F16 cftools tdl
+* Fix events_list
+* Fix describe and delete
+* Pass the parameters to the parser
+* Remove some more unused files
+* Don't need these files anymore. As per the layout in nova compute the manager is handling all the engine api calls
+* Fix --template-file
+* Use some evil to get the jeos tdl path
+* Fix stack_delete()
+* stack_db attributes seem broken. Comment these out for now and the API is generally working
+* Fix create a bit more
+* Hook up RPC methods
+* Pre-bake cftools into an image
+* Initial CloudFormations dummy files for vm helper tools
+* Revert "Allow templates specified from local filesystem"
+* Do mimimum to work with anydb
+* Add support for the Output section
+* Add an Outputs section to the template
+* run dos2unix on the templates
+* Updating the README to point to the Getting Started Wiki
+* Adding the sqlalchemy db implmentation
+* Allow templates specified from local filesystem
+* Updated openstack script to print a note about the default network
+* Beginings of Volumes and VolumeAttachments
+* Update readme with the Keystone service setup
+* Add a heat database to store templates, state, and events Fixes #39
+* Make the "heat delete" command work
+* Fix a crash in "heat show/list"
+* Fix keystone creds in parser
+* Make wordpress template leave mysql+http running, and start/enable them by default
+* Pass the keystone creds to resource.py so usable from run-parser and heat
+* temporarily hack out the keystone auth
+* Updated wordpress single instance template to have quotes in proper place
+* F16 updates broken- Delete F16 and F17 update repos and don't yum update
+* Start userdata script after decoding
+* use << intead of &lt;&lt; in Wordpress example
+* Add FnBase64 encoder, encode user data, and feed to nova userdata
+* Add installation of cloud-init to the JEOS creation operation
+* Show how to create a network after using the openstack tools script
+* Remove errant debugging print from run-parser.py
+* Update to setup directions
+* Stack list now communicating end to end. Time to hook some stuff up
+* Change default exchange to heat-engine from nova. Hook up 'list' though it doesn't work yet
+* Make create Working with recent glance mysql changes in F16/F17 RPMs
+* Add mysql db creation for glance
+* Fix run_parser.py to work with the db updates
+* Move simpledb to db/anydbm just so we are using the new API
+* Fix the service toke and endpoint
+* Add script to add heat service catalog into keystone
+* Get simple rpc.call working
+* Add needed strtime functions from nova
+* Add missing references
+* Wait for server to enter the ACTIVE state or ERROR state and send events
+* Stub out the database access API
+* s/image/heat in auth code
+* Copy some glance/common fixes
+* run_parser.py creates an instance now
+* Updated run-parser.py to work well with WordPress template
+* Updated README with more precise setup directions
+* Produce proper distro-arch variable for use with launching
+* Update run-parser to work with proper user parameters as sent through the apis
+* Security credentials are now passed into heat engine from cli
+* Fix spelling error dependancies->dependencies
+* Fix spelling error
+* Tidy up README.rst
+* Removing OpenStack LLC copyright
+* Adding F17 JEOS tdl Issue #25
+* Fix some tabbing
+* Add the ValidateTemplate API
+* Fix misspelling of Ubuntu so tdl is properly found
+* Get the heat --parameters to work
+* Add ami conversion to OpenStack style architectures
+* Account for missing Properties
+* Install /var/lib/heat directory
+* Fix order of parmeters issue
+* Fix heat jeos_create F16 x86_64 litters files
+* Remove unneeded deps
+* Fix up some imports so they work. I think this is right now. :)
+* Add README to tools directory to help point out what files do
+* Initial work on migrating heat-engine to rpc
+* Add error checking and help to tool
+* Add a missing tab
+* Add code that shows how to create an instance
+* Consistently use Keystone auth from environment
+* Begin the change to a python only implementation
+* Add an experimental ssh monitoring script
+* Covert AWS instance types into Openstack Flavors
+* Change run_parser.py to run t1.micro rather then m1.large
+* Some glance keystone changes from getting started guide
+* Updated with latest F17 nova auth fix
+* install/erase working better
+* Add a openstack helper install script
+* Add elastic ip association to parser
+* A few cleanups and some comments. Nothing major
+* Use keystone auth environment variables
+* Improved "test" parser for python orchestration
+* Record events and retrieve them via "heat events_list <stack_name>"
+* tweak the templates so the defaults are actually what we want
+* Use full distro-arch as name of image registered with glance
+* Properly handle templates of invalid format
+* Display error message on invalid template URL
+* Display message on heat-api and heat-engine startup
+* Removed the *.log from the .gitignore so I can add the dummy files
+* Removing some of the cargo cult copy paste shrapnel
+* Adding rpm packaging for heat packages
+* teach jeos_create about the debug option
+* Improve the error checking in jeos_create
+* Updating template example github link
+* Minor text edits
+* Directives to not use variable names that conflict with pdb
+* Fix a module import failure
+* Fix README bullets
+* Fix README headings
+* Update the README
+* Start separating the api and the implementation
+* fix delete params (was treated as body)
+* Update readme with correct "raw" url for template
+* Remove erroneous setup operation
+* Install config files properly
+* Rename the etc/ files to what they need to be
+* Pretty up the README
+* Add etc to the manifest
+* Add a jeos create operation using oz
+* Updated README with install directions
+* Add MANIFEST.in and add a oz tdl for a F16 jeos
+* Sync cfg from openstack-common
+* Remove a bunch of unused util code
+* Add a cape event listener
+* Catch errors better when creating the stack
+* Remerge common code with glance
+* Add config cp to README doc
+* Don't crash if there is no "AWS::CloudFormation::Init" section
+* Move the default port number into common.config
+* Change the default port references to DEFAULT_PORT
+* Fix missing paren
+* Add a call to start cape process
+* Hook up the update and delete (not quite working)
+* Add a very rough-and-ready conversion from json to xml for cape
+* Add support for getting the template via url else we get RequestUriTooLong
+* Add missing RequestUriTooLong exception
+* Fix the systemd service section in the template
+* Add a disto mapping to get the image name
+* Simplify the template more
+* Add a simple single instance wordpress template
+* Remove openstack copy right assignment as we have not done that yet
+* Add a simple in-memory "db" so we can create/list stacks
+* Add setup.py and friends
+* Add simple readme
+* Fix Parameters
+* Initial commit (basics copied from glance)

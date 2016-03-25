@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="bc23ec26-dd38-4fdd-b60b-958a45266d22" name="Default" comment="" />
+    <ignored path="neutron-2014.2.2-gcloud.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="neutron-2014.2.2-gcloud" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/neutron/db/subnetipinfo_db.py" />
+        <option value="$PROJECT_DIR$/neutron/db/migration/alembic_migrations/versions/feaf26edca9_add_gcloud_nats_plus_table.py" />
+        <option value="$PROJECT_DIR$/neutron/extensions/gcloud_nat.py" />
+        <option value="$PROJECT_DIR$/neutron/plugins/cisco/cfg_agent/service_helpers/routing_svc_helper.py" />
+        <option value="$PROJECT_DIR$/neutron/db/migration/alembic_migrations/versions/411dbb33848a_add_gcloud_nats_table.py" />
+        <option value="$PROJECT_DIR$/neutron/db/migration/alembic_migrations/versions/8b9ddc2629f_add_gw_port_id_to_gcloudnats.py" />
+        <option value="$PROJECT_DIR$/setup.cfg" />
+        <option value="$PROJECT_DIR$/neutron/db/migration/alembic_migrations/versions/2806f2233aca_floatingip_qos.py" />
+        <option value="$PROJECT_DIR$/neutron/agent/linux/keepalived.py" />
+        <option value="$PROJECT_DIR$/neutron/agent/l3_ha_agent.py" />
+        <option value="$PROJECT_DIR$/neutron/openstack/common/service.py" />
+        <option value="$PROJECT_DIR$/neutron/service.py" />
+        <option value="$PROJECT_DIR$/neutron/common/rpc.py" />
+        <option value="$PROJECT_DIR$/neutron/db/gcloud_nat_db.py" />
+        <option value="$PROJECT_DIR$/neutron/db/db_base_plugin_v2.py" />
+        <option value="$PROJECT_DIR$/neutron/db/l3_db.py" />
+        <option value="$PROJECT_DIR$/neutron/db/l3_dvr_db.py" />
+        <option value="$PROJECT_DIR$/neutron/agent/linux/interface.py" />
+        <option value="$PROJECT_DIR$/neutron/common/config.py" />
+        <option value="$PROJECT_DIR$/neutron/plugins/ml2/plugin.py" />
+        <option value="$PROJECT_DIR$/etc/dhcp_agent.ini" />
+        <option value="$PROJECT_DIR$/etc/fwaas_driver.ini" />
+        <option value="$PROJECT_DIR$/etc/lbaas_agent.ini" />
+        <option value="$PROJECT_DIR$/etc/metadata_agent.ini" />
+        <option value="$PROJECT_DIR$/etc/neutron/plugins/ml2/ml2_conf.ini" />
+        <option value="$PROJECT_DIR$/etc/neutron.conf" />
+        <option value="$PROJECT_DIR$/etc/l3_agent.ini" />
+        <option value="$PROJECT_DIR$/neutron/api/rpc/handlers/l3_rpc.py" />
+        <option value="$PROJECT_DIR$/neutron/agent/l3_agent.py" />
+        <option value="$PROJECT_DIR$/neutron/db/l3_hamode_db.py" />
+        <option value="$PROJECT_DIR$/neutron/extensions/l3_ext_ha_mode.py" />
+        <option value="$PROJECT_DIR$/neutron/extensions/l3.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="736" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neutron-2014.2.2-gcloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="oslo.config-1.4.0">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="neutron-2014.2.2-gcloud">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tz_branch" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="64" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="79" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="78" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="64" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="121" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="831" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="77" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="84" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="83" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="77" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="77" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="839" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="neutron-2014.2.2-gcloud" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="neutron-2014.2.2-gcloud" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="neutron-2014.2.2-gcloud" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="neutron-2014.2.2-gcloud" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="neutron-2014.2.2-gcloud" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="neutron-2014.2.2-gcloud" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="neutron-2014.2.2-gcloud" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">C:\Users\Bear\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\neutron-2014.2.2-gcloud" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\neutron-2014.2.2-gcloud" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\oslo.config-1.4.0" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\oslo.config-1.4.0" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\oslo.db-1.0.2" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\oslo.db-1.0.2" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\oslo.messaging-1.4.1" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\oslo.messaging-1.4.1" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\python-neutronclient-2.3.9" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\python-neutronclient-2.3.9" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\pythonsqldb" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\pythonsqldb" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\neutron-2014.2.2-gcloud" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\neutron-2014.2.2-gcloud" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\oslo.config-1.4.0" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\oslo.config-1.4.0" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\oslo.db-1.0.2" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\oslo.db-1.0.2" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\oslo.messaging-1.4.1" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\oslo.messaging-1.4.1" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\python-neutronclient-2.3.9" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\python-neutronclient-2.3.9" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\work\code\svn\gcloud7.0\pythonsqldb" />
+          <option name="myCopyRoot" value="D:\work\code\svn\gcloud7.0\pythonsqldb" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bc23ec26-dd38-4fdd-b60b-958a45266d22" name="Default" comment="" />
+      <created>1450601607094</created>
+      <updated>1450601607094</updated>
+    </task>
+    <task id="LOCAL-00001" summary="修改子网ip个数统计方法：统计IpAllocationPools里面的分配池，不直接统计cidr">
+      <created>1450668603115</created>
+      <updated>1450668603115</updated>
+    </task>
+    <task id="LOCAL-00002" summary="增加被误删的qos相关代码">
+      <created>1450679311108</created>
+      <updated>1450679311108</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改  B U G">
+      <created>1450858253106</created>
+      <updated>1450858253106</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改BUG7062：禁止创建相同的nat映射">
+      <created>1450923257181</created>
+      <updated>1450923257181</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改BUG7061：禁止同一个端口（ext_port或者int_port）重复映射">
+      <created>1450924731104</created>
+      <updated>1450924731104</updated>
+    </task>
+    <task id="LOCAL-00006" summary="增加gcloudnats表中gw_port_id字段的外键属性">
+      <created>1451112543202</created>
+      <updated>1451112543202</updated>
+    </task>
+    <task id="LOCAL-00007" summary="针对l3_ha路由修改default路由设置方式。&#10;l3_ha路由default路由原本是通过keepalive进程自身从keepalive.conf配置文件读取并添加的，此时若gw_port没有分配ip(如没创建gcloud_nat而直接使用floatingip), default无法建立。&#10;">
+      <created>1451121116115</created>
+      <updated>1451121116115</updated>
+    </task>
+    <task id="LOCAL-00008" summary="通过读取ha路由/var/lib/neutron/ha_confs/xxx/state判断是master则手动加默认网关&#10;">
+      <created>1451980018232</created>
+      <updated>1451980018232</updated>
+    </task>
+    <task id="LOCAL-00009" summary="还原浮动IP的设置方式，32位">
+      <created>1451980315107</created>
+      <updated>1451980315107</updated>
+    </task>
+    <task id="LOCAL-00010" summary="保证每次更新路由都更新default路由">
+      <created>1451982466103</created>
+      <updated>1451982466103</updated>
+    </task>
+    <task id="LOCAL-00011" summary="保证每次更新路由都更新default路由">
+      <created>1451986372107</created>
+      <updated>1451986372107</updated>
+    </task>
+    <task id="LOCAL-00012" summary="完善neutron-server启动进程数，默认启动的进程数为节点CPU核数">
+      <created>1452052269165</created>
+      <updated>1452052269165</updated>
+    </task>
+    <task id="LOCAL-00013" summary="数据库版本合并，解决同一个表gcloudnats多个版本且分别有外键问题">
+      <created>1452138192177</created>
+      <updated>1452138192177</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ha路由，keepalive.conf中VIP和默认网关完善">
+      <created>1452164621115</created>
+      <updated>1452164621115</updated>
+    </task>
+    <task id="LOCAL-00015" summary="动态修改FLOATING_IP_CIDR_SUFFIX">
+      <created>1452169093107</created>
+      <updated>1452169093107</updated>
+    </task>
+    <task id="LOCAL-00016" summary="一些日志相关 （FLOATING_IP_CIDR_SUFFIX）">
+      <created>1452217468222</created>
+      <updated>1452217468222</updated>
+    </task>
+    <task id="LOCAL-00017" summary="解决BUG7358：只有当用户购买的网关IP过期时间到时，才删除对应的gateway_ip；&#10;另外加了些其他代码分析注释">
+      <created>1453340853188</created>
+      <updated>1453340853188</updated>
+    </task>
+    <task id="LOCAL-00018" summary="删除一些debug日志">
+      <created>1453777254150</created>
+      <updated>1453777254150</updated>
+    </task>
+    <task id="LOCAL-00019" summary="为neutron各服务对应的配置文件增加所有配置的预配置">
+      <created>1456127941189</created>
+      <updated>1456127941189</updated>
+    </task>
+    <task id="LOCAL-00020" summary="单租户使用方式下，需要增加一个租户所能创建的ha路由最大个数（从254增加到10000）">
+      <created>1456469139191</created>
+      <updated>1456469139191</updated>
+    </task>
+    <task id="LOCAL-00021" summary="单租户ha路由只能为254个(keepalive配置文件vrrp中的virtual_router_id必须是1-255)，还原VR_ID_RANGE">
+      <created>1456476639103</created>
+      <updated>1456476639103</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1358" y="-8" width="1296" height="736" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22890624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29166666" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="修改子网ip个数统计方法：统计IpAllocationPools里面的分配池，不直接统计cidr" />
+    <MESSAGE value="增加被误删的qos相关代码" />
+    <MESSAGE value="修改BUG" />
+    <MESSAGE value="修改  B U G" />
+    <MESSAGE value="修改BUG7062：禁止创建相同的nat映射" />
+    <MESSAGE value="修改BUG7061：禁止同一个端口（ext_port或者int_port）重复映射" />
+    <MESSAGE value="增加gcloudnats表中gw_port_id字段的外键属性" />
+    <MESSAGE value="针对l3_ha路由修改default路由设置方式。&#10;l3_ha路由default路由原本是通过keepalive进程自身从keepalive.conf配置文件读取并添加的，此时若gw_port没有分配ip(如没创建gcloud_nat而直接使用floatingip), default无法建立。&#10;" />
+    <MESSAGE value="通过读取ha路由/var/lib/neutron/ha_confs/xxx/state判断是master则手动加默认网关&#10;" />
+    <MESSAGE value="还原浮动IP的设置方式，32位" />
+    <MESSAGE value="保证每次更新路由都更新default路由" />
+    <MESSAGE value="完善neutron-server启动进程数，默认启动的进程数为节点CPU核数" />
+    <MESSAGE value="数据库版本合并，解决同一个表gcloudnats多个版本且分别有外键问题" />
+    <MESSAGE value="ha路由，keepalive.conf中VIP和默认网关完善" />
+    <MESSAGE value="动态修改FLOATING_IP_CIDR_SUFFIX" />
+    <MESSAGE value="一些日志相关 （FLOATING_IP_CIDR_SUFFIX）" />
+    <MESSAGE value="解决BUG7358：只有当用户购买的网关IP过期时间到时，才删除对应的gateway_ip；&#10;另外加了些其他代码分析注释" />
+    <MESSAGE value="删除一些debug日志" />
+    <MESSAGE value="为neutron各服务对应的配置文件增加所有配置的预配置" />
+    <MESSAGE value="单租户使用方式下，需要增加一个租户所能创建的ha路由最大个数（从254增加到10000）" />
+    <MESSAGE value="单租户ha路由只能为254个(keepalive配置文件vrrp中的virtual_router_id必须是1-255)，还原VR_ID_RANGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="单租户ha路由只能为254个(keepalive配置文件vrrp中的virtual_router_id必须是1-255)，还原VR_ID_RANGE" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/neutron/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="8" selection-start="7797" selection-end="7797" vertical-scroll-proportion="0.0" vertical-offset="3629" max-vertical-offset="4180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/db_base_plugin_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1011" column="8" selection-start="47553" selection-end="47553" vertical-scroll-proportion="0.0" vertical-offset="18593" max-vertical-offset="32870" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/dvr_mac_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="6" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.3321234" vertical-offset="520" max-vertical-offset="3154" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/external_net_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="6" selection-start="1727" selection-end="1727" vertical-scroll-proportion="-0.80580765" vertical-offset="1090" max-vertical-offset="2964" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/portqos_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="6" selection-start="983" selection-end="983" vertical-scroll-proportion="0.3321234" vertical-offset="349" max-vertical-offset="1786" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/extradhcpopt_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="6" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.3321234" vertical-offset="672" max-vertical-offset="2337" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/neutron_plugin_base_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="6" selection-start="871" selection-end="871" vertical-scroll-proportion="-1.0127041" vertical-offset="1052" max-vertical-offset="6783" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/common_db_mixin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="6" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="3427" max-vertical-offset="5510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/drivers/type_flat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="29" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.0" vertical-offset="852" max-vertical-offset="2451" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/api/v2/attributes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="4" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.0" vertical-offset="881" max-vertical-offset="16359" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/extensions/providernet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="1881" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/extensions/multiprovidernet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="6" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="2337" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="6" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="2261" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="28" selection-start="1711" selection-end="1711" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="6004" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-762174762/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2479" column="8" selection-start="84042" selection-end="84042" vertical-scroll-proportion="0.3321234" vertical-offset="46918" max-vertical-offset="97869" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/drivers/type_vxlan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="41" selection-start="2386" selection-end="2386" vertical-scroll-proportion="0.7241379" vertical-offset="684" max-vertical-offset="2774" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/drivers/type_tunnel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="40" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.3321234" vertical-offset="216" max-vertical-offset="3648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/managers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="247" column="60" selection-start="10957" selection-end="10957" vertical-scroll-proportion="0.5735027" vertical-offset="4168" max-vertical-offset="13338" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/api/extensions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="6" selection-start="1810" selection-end="1810" vertical-scroll-proportion="-0.5" vertical-offset="1197" max-vertical-offset="12825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/plugin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="571" column="41" selection-start="26334" selection-end="26334" vertical-scroll-proportion="-1.75" vertical-offset="10849" max-vertical-offset="24966" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/drivers/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="30" selection-start="972" selection-end="972" vertical-scroll-proportion="-0.12238325" vertical-offset="551" max-vertical-offset="2755" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/driver_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="6" selection-start="1071" selection-end="1071" vertical-scroll-proportion="-0.030595813" vertical-offset="570" max-vertical-offset="15884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/ml2/drivers/type_vlan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="254" column="24" selection-start="11136" selection-end="11136" vertical-scroll-proportion="0.7246377" vertical-offset="4091" max-vertical-offset="4712" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/openstack/common/middleware/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="6" selection-start="705" selection-end="705" vertical-scroll-proportion="-1.1934524" vertical-offset="781" max-vertical-offset="1178" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/openstack/common/middleware/catch_errors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="37" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.16369048" vertical-offset="458" max-vertical-offset="836" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/webob/dec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="8" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.33333334" vertical-offset="1275" max-vertical-offset="5681" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/openstack/common/middleware/request_id.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="23" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.7858293" vertical-offset="215" max-vertical-offset="836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/metadata_agent.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="5" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1482" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/lbaas_agent.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1007" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/neutron/plugins/ml2/ml2_conf.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1690" selection-end="1741" vertical-scroll-proportion="0.0" vertical-offset="798" max-vertical-offset="2166" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/fwaas_driver.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="8" selection-end="184" vertical-scroll-proportion="0.030595813" vertical-offset="0" max-vertical-offset="621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/dhcp_agent.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="55" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/l3_agent.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="2337" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/agent/l3_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="26" selection-start="800" selection-end="800" vertical-scroll-proportion="0.6875" vertical-offset="57" max-vertical-offset="43263" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/extensions/l3_ext_ha_mode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="51" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0" vertical-offset="553" max-vertical-offset="1900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/l3_hamode_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="43" selection-start="6201" selection-end="6201" vertical-scroll-proportion="-0.530541" vertical-offset="3116" max-vertical-offset="8626" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/neutron.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="627" column="19" selection-start="21426" selection-end="21426" vertical-scroll-proportion="0.65536726" vertical-offset="11681" max-vertical-offset="13870" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/common/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="779" selection-end="779" vertical-scroll-proportion="-2.9" vertical-offset="1520" max-vertical-offset="1900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/l3_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="33" selection-start="4258" selection-end="4258" vertical-scroll-proportion="0.6185286" vertical-offset="1331" max-vertical-offset="32338" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/db/migration/alembic_migrations/versions/2806f2233aca_floatingip_qos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.95789474" vertical-offset="453" max-vertical-offset="1026" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/api/rpc/agentnotifiers/dhcp_rpc_agent_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="66" selection-start="5139" selection-end="5139" vertical-scroll-proportion="0.39597315" vertical-offset="1968" max-vertical-offset="3572" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/api/rpc/handlers/l3_rpc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="66" selection-start="3540" selection-end="3540" vertical-scroll-proportion="0.29276314" vertical-offset="1285" max-vertical-offset="4617" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/plugins/openvswitch/agent/ovs_neutron_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1503" column="67" selection-start="74208" selection-end="74208" vertical-scroll-proportion="0.40625" vertical-offset="28196" max-vertical-offset="30913" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/extensions/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/extensions/gcloud_nat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="57" selection-start="4790" selection-end="4790" vertical-scroll-proportion="0.0" vertical-offset="2280" max-vertical-offset="3496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/extensions/gcloud_ipinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="21" selection-start="2502" selection-end="2502" vertical-scroll-proportion="0.0" vertical-offset="1197" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/api/v2/resource_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="34" selection-start="3521" selection-end="3521" vertical-scroll-proportion="0.0" vertical-offset="1085" max-vertical-offset="1805">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/api/v2/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="783" column="22" selection-start="37869" selection-end="37869" vertical-scroll-proportion="0.0" vertical-offset="14193" max-vertical-offset="14801">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/routes/mapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="40" selection-start="2846" selection-end="2861" vertical-scroll-proportion="0.0" vertical-offset="933" max-vertical-offset="22933">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/api/v2/router.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="52" selection-start="2430" selection-end="2430" vertical-scroll-proportion="0.0" vertical-offset="1349" max-vertical-offset="2318">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neutron/extensions/l3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="71" selection-start="7724" selection-end="7724" vertical-scroll-proportion="0.5968586" vertical-offset="2736" max-vertical-offset="6213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

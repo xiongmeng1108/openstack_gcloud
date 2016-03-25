@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/neutron-2014.2.2-gcloud.iml" filepath="$PROJECT_DIR$/.idea/neutron-2014.2.2-gcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oslo.config-1.4.0/.idea/oslo.config-1.4.0.iml" filepath="$PROJECT_DIR$/../oslo.config-1.4.0/.idea/oslo.config-1.4.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oslo.db-1.0.2/.idea/oslo.db-1.0.2.iml" filepath="$PROJECT_DIR$/../oslo.db-1.0.2/.idea/oslo.db-1.0.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oslo.messaging-1.4.1/.idea/oslo.messaging-1.4.1.iml" filepath="$PROJECT_DIR$/../oslo.messaging-1.4.1/.idea/oslo.messaging-1.4.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python-neutronclient-2.3.9/.idea/python-neutronclient-2.3.9.iml" filepath="$PROJECT_DIR$/../python-neutronclient-2.3.9/.idea/python-neutronclient-2.3.9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pythonsqldb/.idea/pythonsqldb.iml" filepath="$PROJECT_DIR$/../pythonsqldb/.idea/pythonsqldb.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,11 @@
+[Unit]
+Description=OpenStack Heat API Service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=heat
+ExecStart=/usr/bin/gcloud-template-api  --logfile /var/log/heat/gcloud-template-api.log
+
+[Install]
+WantedBy=multi-user.target

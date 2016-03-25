@@ -1,0 +1,33 @@
+--- base.py	2014-09-27 07:50:08.000000000 +0800
++++ base.new.py	2015-08-24 15:47:58.926206890 +0800
+@@ -22,9 +22,11 @@
+ import contextlib
+ import hashlib
+ import os
+-
++from heat.openstack.common import log as logging
++LOG = logging.getLogger(__name__)
+ import six
+-
++from heat.openstack.common import log as logging
++LOG = logging.getLogger(__name__)
+ from cinderclient import exceptions
+ from cinderclient.openstack.common.apiclient import base as common_base
+ from cinderclient import utils
+@@ -165,6 +167,16 @@
+     def _delete(self, url):
+         resp, body = self.api.client.delete(url)
+ 
++
++    def _soft_delete(self, url):
++        body = {
++             "logical_delete":{
++                  "delete": True
++             }
++        }
++        resp, body = self.api.client.post(url, body=body)
++        
++
+     def _update(self, url, body, **kwargs):
+         self.run_hooks('modify_body_for_update', body, **kwargs)
+         resp, body = self.api.client.put(url, body=body)
